@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sandbox Hub — Choose EHR</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}" />
+</head>
+<body class="page-home">
+  <div class="home-wrap">
+    <header class="home-header">
+      <div class="home-risa-brand">
+        <img
+          class="home-risa-logo"
+          src="{{ url_for('static', filename='logos/risa.jpeg') }}"
+          alt="RISA"
+          width="200"
+          height="80"
+        />
+      </div>
+      <div class="home-header-text">
+        <h1>Boss EHR Sandbox Dashboard</h1>
+        <p class="muted">Select an EHR to open the prior authorization workspace. Each card lists saved test users from that sandbox.</p>
+      </div>
+    </header>
+
+    <section class="card-grid">
+      {% for id in ehrs %}
+      {% set prev = ehr_previews.get(id, []) %}
+      <a class="ehr-card" href="{{ url_for('workspace', ehr=id) }}">
+        <span class="ehr-card-logo" aria-hidden="true">
+          <img src="{{ url_for('static', filename='logos/' ~ id ~ '.png') }}" alt="" width="160" height="56" />
+        </span>
+        <span class="ehr-card-title">{% if id == 'epic' %}Epic{% elif id == 'ecw' %}eClinicalWorks{% elif id == 'nextgen' %}NextGen{% else %}iKnowMed{% endif %}</span>
+        {% if prev %}
+        <div class="ehr-card-users" role="list">
+          <div class="ehr-card-users-title">Test users</div>
+          <ul class="ehr-card-users-list">
+            {% for u in prev %}
+            <li role="listitem"><span class="ehr-user-name">{{ u.label }}</span></li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% else %}
+        <p class="ehr-card-empty muted small">No <code>{{ id }}</code> exports yet (expected <code>fhir_*_output_*.json</code> in the sandbox folder).</p>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </section>
+  </div>
+</body>
+</html>

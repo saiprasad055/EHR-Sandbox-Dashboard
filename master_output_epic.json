@@ -1,0 +1,2996 @@
+{
+  "exported_at": "2026-06-10T19:50:32.079926+00:00",
+  "patient_id": "erXuFYUfucBZaryVksYEcMg3",
+  "fhir_base": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4",
+  "export_sequence": 3,
+  "export_filename": "fhir_epic_output_3.json",
+  "resource_keys": [
+    "patient",
+    "observations",
+    "reports",
+    "medication_requests",
+    "medication_statements",
+    "procedures",
+    "conditions",
+    "care_plans",
+    "goals",
+    "medications",
+    "smoking_history",
+    "coverage",
+    "encounters",
+    "practitioners",
+    "locations"
+  ],
+  "resources": {
+    "patient": {
+      "status_code": 200,
+      "data": {
+        "resourceType": "Patient",
+        "id": "erXuFYUfucBZaryVksYEcMg3",
+        "extension": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.698084.130.657370.19999000",
+                  "code": "female",
+                  "display": "female"
+                }
+              ],
+              "text": "Female"
+            },
+            "url": "http://open.epic.com/FHIR/StructureDefinition/extension/legal-sex"
+          },
+          {
+            "extension": [
+              {
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2131-1",
+                  "display": "Other Race"
+                },
+                "url": "ombCategory"
+              },
+              {
+                "valueString": "Other",
+                "url": "text"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension": [
+              {
+                "valueString": "Unknown",
+                "url": "text"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          },
+          {
+            "valueCode": "184115007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "text": "CEID"
+            },
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.3.688884.100",
+            "value": "FHRCHXL4MQW8KNK"
+          },
+          {
+            "use": "usual",
+            "type": {
+              "text": "EPIC"
+            },
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.0",
+            "value": "E4007"
+          },
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType",
+                  "code": "um"
+                }
+              ],
+              "text": "EXTERNAL"
+            },
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.698084",
+            "value": "Z6129"
+          },
+          {
+            "use": "usual",
+            "type": {
+              "text": "FHIR"
+            },
+            "system": "http://open.epic.com/FHIR/StructureDefinition/patient-dstu2-fhir-id",
+            "value": "TnOZ.elPXC6zcBNFMcFA7A5KZbYxo2.4T-LylRk4GoW4B"
+          },
+          {
+            "use": "usual",
+            "type": {
+              "text": "FHIR STU3"
+            },
+            "system": "http://open.epic.com/FHIR/StructureDefinition/patient-fhir-id",
+            "value": "erXuFYUfucBZaryVksYEcMg3"
+          },
+          {
+            "use": "usual",
+            "type": {
+              "text": "INTERNAL"
+            },
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.698084",
+            "value": "     Z6129"
+          },
+          {
+            "use": "usual",
+            "type": {
+              "text": "EPI"
+            },
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.14",
+            "value": "203713"
+          },
+          {
+            "use": "usual",
+            "type": {
+              "text": "MYCHARTLOGIN"
+            },
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.3.878082.110",
+            "value": "FHIRCAMILA"
+          },
+          {
+            "use": "usual",
+            "type": {
+              "text": "WPRINTERNAL"
+            },
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.878082",
+            "value": "736"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "text": "Camila Maria Lopez",
+            "family": "Lopez",
+            "given": [
+              "Camila",
+              "Maria"
+            ]
+          },
+          {
+            "use": "usual",
+            "text": "Camila Maria Lopez",
+            "family": "Lopez",
+            "given": [
+              "Camila",
+              "Maria"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 469-888-8888",
+            "use": "work",
+            "rank": 2
+          },
+          {
+            "system": "phone",
+            "value": "+1 469-469-4321",
+            "use": "mobile",
+            "rank": 3
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1987-09-12",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "use": "home",
+            "text": "3268 W Johnson St Apt 117\r\nGARLAND TX 75043\r\nUnited States of America",
+            "line": [
+              "3268 West Johnson St.",
+              "Apt 117"
+            ],
+            "city": "GARLAND",
+            "district": "DALLAS",
+            "state": "TX",
+            "postalCode": "75043",
+            "country": "US",
+            "period": {
+              "start": "2019-05-24"
+            }
+          }
+        ],
+        "maritalStatus": {
+          "text": "Married"
+        },
+        "communication": [
+          {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "valueCoding": {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode",
+                      "code": "ESP",
+                      "display": "Expressed spoken"
+                    },
+                    "url": "type"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/patient-proficiency"
+              },
+              {
+                "extension": [
+                  {
+                    "valueCoding": {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode",
+                      "code": "EWR",
+                      "display": "Expressed written"
+                    },
+                    "url": "type"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/patient-proficiency"
+              }
+            ],
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            },
+            "preferred": true,
+            "_preferred": {
+              "extension": [
+                {
+                  "valueCoding": {
+                    "system": "http://hl7.org/fhir/language-preference-type",
+                    "code": "verbal",
+                    "display": "verbal"
+                  },
+                  "url": "http://hl7.org/fhir/StructureDefinition/patient-preferenceType"
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://hl7.org/fhir/language-preference-type",
+                    "code": "written",
+                    "display": "written"
+                  },
+                  "url": "http://hl7.org/fhir/StructureDefinition/patient-preferenceType"
+                }
+              ]
+            }
+          },
+          {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "valueCoding": {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode",
+                      "code": "EWR",
+                      "display": "Expressed written"
+                    },
+                    "url": "type"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/patient-proficiency"
+              }
+            ],
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "es",
+                  "display": "Spanish"
+                }
+              ],
+              "text": "Spanish"
+            }
+          }
+        ],
+        "generalPractitioner": [
+          {
+            "reference": "Practitioner/eM5CWtq15N0WJeuCet5bJlQ3",
+            "type": "Practitioner",
+            "display": "Physician"
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/enRyWnSP963FYDpoks4NHOA3",
+          "display": "EHS Service Area"
+        }
+      },
+      "error": null,
+      "count": 1
+    },
+    "observations": {
+      "status_code": 200,
+      "data": {
+        "resourceType": "Bundle",
+        "type": "searchset",
+        "total": 1,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation?category=laboratory&patient=erXuFYUfucBZaryVksYEcMg3"
+          }
+        ],
+        "entry": [
+          {
+            "link": [
+              {
+                "relation": "self",
+                "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/eyPMWgv2u2RUfsV4p1lLKuUtqyPs2-QNi2zKvbTsFYtRByc6B.cSi1iVU5V2HOpX23"
+              }
+            ],
+            "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/eyPMWgv2u2RUfsV4p1lLKuUtqyPs2-QNi2zKvbTsFYtRByc6B.cSi1iVU5V2HOpX23",
+            "resource": {
+              "resourceType": "Observation",
+              "id": "eyPMWgv2u2RUfsV4p1lLKuUtqyPs2-QNi2zKvbTsFYtRByc6B.cSi1iVU5V2HOpX23",
+              "extension": [
+                {
+                  "valueBoolean": false,
+                  "url": "http://nictiz.nl/fhir/StructureDefinition/ext-CopyIndicator"
+                }
+              ],
+              "basedOn": [
+                {
+                  "reference": "ServiceRequest/egf4KkhXmgeVWImXEEYH.CEE1ZgJG5SQy2vBX1HgvBCs3",
+                  "display": "HEMOGLOBIN A1C"
+                }
+              ],
+              "status": "final",
+              "category": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                      "code": "laboratory",
+                      "display": "Laboratory"
+                    }
+                  ],
+                  "text": "Laboratory"
+                },
+                {
+                  "coding": [
+                    {
+                      "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                      "code": "Lab",
+                      "display": "Lab"
+                    }
+                  ],
+                  "text": "Lab"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "4548-4",
+                    "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+                  },
+                  {
+                    "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.768282",
+                    "code": "1558024",
+                    "display": "Hemoglobin A1C"
+                  }
+                ],
+                "text": "Hemoglobin A1C"
+              },
+              "subject": {
+                "reference": "Patient/erXuFYUfucBZaryVksYEcMg3",
+                "display": "Lopez, Camila Maria"
+              },
+              "effectiveDateTime": "2019-05-28T14:22:00Z",
+              "issued": "2019-05-28T14:22:41Z",
+              "valueQuantity": {
+                "value": 5.1
+              },
+              "specimen": {
+                "reference": "Specimen/e.n21kE9PMQ94vOo1lkT2XkN1av86guPxYsFU20qTQ1M3",
+                "display": "Specimen"
+              }
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:ac42b00d-8c46-4a0e-967f-246e6e77fc20",
+            "resource": {
+              "resourceType": "OperationOutcome",
+              "issue": [
+                {
+                  "severity": "warning",
+                  "code": "processing",
+                  "details": {
+                    "coding": [
+                      {
+                        "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.657369",
+                        "code": "4119",
+                        "display": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                      }
+                    ],
+                    "text": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                  }
+                }
+              ]
+            },
+            "search": {
+              "mode": "outcome"
+            }
+          }
+        ]
+      },
+      "error": null,
+      "count": 1
+    },
+    "reports": {
+      "status_code": 200,
+      "data": {
+        "resourceType": "Bundle",
+        "type": "searchset",
+        "total": 4,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/DiagnosticReport?patient=erXuFYUfucBZaryVksYEcMg3"
+          }
+        ],
+        "entry": [
+          {
+            "link": [
+              {
+                "relation": "self",
+                "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/DiagnosticReport/eeIUePPFhkOlGgtsbPko4a4tPlKY9045CYysh7Ryulnc3"
+              }
+            ],
+            "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/DiagnosticReport/eeIUePPFhkOlGgtsbPko4a4tPlKY9045CYysh7Ryulnc3",
+            "resource": {
+              "resourceType": "DiagnosticReport",
+              "id": "eeIUePPFhkOlGgtsbPko4a4tPlKY9045CYysh7Ryulnc3",
+              "identifier": [
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "PLAC",
+                        "display": "Placer Identifier"
+                      }
+                    ],
+                    "text": "Placer Identifier"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.798268",
+                  "value": "1066912"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "FILL",
+                        "display": "Filler Identifier"
+                      }
+                    ],
+                    "text": "Filler Identifier"
+                  },
+                  "value": "161"
+                }
+              ],
+              "status": "final",
+              "category": [
+                {
+                  "coding": [
+                    {
+                      "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                      "code": "Imaging"
+                    }
+                  ],
+                  "text": "Imaging"
+                },
+                {
+                  "coding": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "LP29684-5",
+                      "display": "Radiology"
+                    }
+                  ],
+                  "text": "Radiology"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "36643-5"
+                  },
+                  {
+                    "system": "urn:oid:2.16.840.1.113883.6.12",
+                    "code": "71020",
+                    "display": "HC XR CHEST 2V"
+                  },
+                  {
+                    "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.52000",
+                    "code": "7000029"
+                  },
+                  {
+                    "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.72",
+                    "code": "IMG36"
+                  },
+                  {
+                    "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.155",
+                    "code": "RPID2503"
+                  }
+                ],
+                "text": "X-ray Chest 2 Views"
+              },
+              "subject": {
+                "reference": "Patient/erXuFYUfucBZaryVksYEcMg3",
+                "display": "Lopez, Camila Maria"
+              },
+              "encounter": {
+                "reference": "Encounter/eoIRZgvu9RhrwOzDlZkRbSg3",
+                "identifier": {
+                  "use": "usual",
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.3.698084.8",
+                  "value": "29541"
+                },
+                "display": "Hospital Outpatient Visit"
+              },
+              "effectiveDateTime": "2023-06-02T20:43:46Z",
+              "issued": "2023-07-25T13:27:19Z",
+              "performer": [
+                {
+                  "reference": "Practitioner/eM5CWtq15N0WJeuCet5bJlQ3",
+                  "type": "Practitioner",
+                  "display": "Physician"
+                },
+                {
+                  "reference": "Practitioner/elpRiy0AYgjhdjAhTBJ3Aiw3",
+                  "type": "Practitioner",
+                  "display": "Np"
+                },
+                {
+                  "reference": "Organization/etOhDRFmHqAJ3CBmvHCeF9VYgSiH5bYCNkDSOho2TXb43",
+                  "type": "Organization",
+                  "display": "IMAGING"
+                }
+              ],
+              "resultsInterpreter": [
+                {
+                  "reference": "Practitioner/eM5CWtq15N0WJeuCet5bJlQ3",
+                  "type": "Practitioner",
+                  "display": "Physician"
+                }
+              ],
+              "result": [
+                {
+                  "reference": "Observation/eWQ91GjryHtrlYhSNxK1L7mI-fgFwPAedom.YQ4JDeQk3",
+                  "display": "Narrative"
+                },
+                {
+                  "reference": "Observation/eWQ91GjryHtrlYhSNxK1L7hOQbiABlro0a6oo2bIh68I3",
+                  "display": "Impression"
+                }
+              ],
+              "conclusionCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "225566008",
+                      "display": "Ischemic chest pain (finding)"
+                    },
+                    {
+                      "system": "http://hl7.org/fhir/sid/icd-9-cm",
+                      "code": "786.50",
+                      "display": "Chest pain, unspecified"
+                    },
+                    {
+                      "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                      "code": "I20.9",
+                      "display": "Angina pectoris, unspecified"
+                    }
+                  ],
+                  "text": "Ischemic chest pain"
+                }
+              ],
+              "presentedForm": [
+                {
+                  "contentType": "text/html",
+                  "url": "Binary/eatrFYJ-c5OxFaXGGKhRmt-kbn-1xHl8SNrcCB4fHVps3",
+                  "title": "Narrative"
+                },
+                {
+                  "contentType": "text/html",
+                  "url": "Binary/eatrFYJ-c5OxFaXGGKhRmtxnlc-Z0vWhRnWj621bo99g3",
+                  "title": "Impression"
+                }
+              ]
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "link": [
+              {
+                "relation": "self",
+                "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/DiagnosticReport/ejRFFAyoWd-DvE0lHi4UEUVA9qTH9PxfCLhEetlq04Ck3"
+              }
+            ],
+            "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/DiagnosticReport/ejRFFAyoWd-DvE0lHi4UEUVA9qTH9PxfCLhEetlq04Ck3",
+            "resource": {
+              "resourceType": "DiagnosticReport",
+              "id": "ejRFFAyoWd-DvE0lHi4UEUVA9qTH9PxfCLhEetlq04Ck3",
+              "identifier": [
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "PLAC",
+                        "display": "Placer Identifier"
+                      }
+                    ],
+                    "text": "Placer Identifier"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.798268",
+                  "value": "1066915"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "FILL",
+                        "display": "Filler Identifier"
+                      }
+                    ],
+                    "text": "Filler Identifier"
+                  },
+                  "value": "162"
+                }
+              ],
+              "basedOn": [
+                {
+                  "reference": "ServiceRequest/e6t1HtRj0Za8M9Y0u5nU2tu3idJ7P66B2HzlMtddZ6Wc3",
+                  "display": "TRANSTHORACIC ECHO (TTE) COMPLETE"
+                }
+              ],
+              "status": "final",
+              "category": [
+                {
+                  "coding": [
+                    {
+                      "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                      "code": "Echo"
+                    }
+                  ],
+                  "text": "Echocardiography"
+                },
+                {
+                  "coding": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "LP29708-2",
+                      "display": "Cardiology"
+                    }
+                  ],
+                  "text": "Cardiology"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.840.1.113883.6.12",
+                    "code": "93306",
+                    "display": "HC TRANSTHORACIC ECHO"
+                  }
+                ],
+                "text": "Transthoracic Echo (TTE) Complete"
+              },
+              "subject": {
+                "reference": "Patient/erXuFYUfucBZaryVksYEcMg3",
+                "display": "Lopez, Camila Maria"
+              },
+              "encounter": {
+                "reference": "Encounter/ej567ARSFdaF4ooZVunIlIg3",
+                "identifier": {
+                  "use": "usual",
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.3.698084.8",
+                  "value": "29542"
+                },
+                "display": "Hospital Outpatient Visit"
+              },
+              "effectiveDateTime": "2023-06-02T20:50:25Z",
+              "issued": "2023-07-25T13:26:44Z",
+              "performer": [
+                {
+                  "reference": "Practitioner/eM5CWtq15N0WJeuCet5bJlQ3",
+                  "type": "Practitioner",
+                  "display": "Physician"
+                },
+                {
+                  "reference": "Practitioner/elpRiy0AYgjhdjAhTBJ3Aiw3",
+                  "type": "Practitioner",
+                  "display": "Np"
+                },
+                {
+                  "reference": "Organization/eVUDU8oWh9.KM7oI8Mu9jlqn1C3d5ozeHAXDHuaPYsvU3",
+                  "type": "Organization",
+                  "display": "CPACS"
+                }
+              ],
+              "resultsInterpreter": [
+                {
+                  "reference": "Practitioner/eM5CWtq15N0WJeuCet5bJlQ3",
+                  "type": "Practitioner",
+                  "display": "Physician"
+                }
+              ],
+              "result": [
+                {
+                  "reference": "Observation/epvZIWrCStn-QxWdd6yDL2rsODx.M3VAMdHGGYcFbGkQ3",
+                  "display": "Narrative"
+                },
+                {
+                  "reference": "Observation/fbfPo.ES7-w0yiUV6i0Z-KTcxiw4KcWHNiS2RE8aWSWw4",
+                  "display": "Myocardial Finding: Left Ventricle"
+                }
+              ],
+              "conclusionCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "225566008",
+                      "display": "Ischemic chest pain (finding)"
+                    },
+                    {
+                      "system": "http://hl7.org/fhir/sid/icd-9-cm",
+                      "code": "786.50",
+                      "display": "Chest pain, unspecified"
+                    },
+                    {
+                      "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                      "code": "I20.9",
+                      "display": "Angina pectoris, unspecified"
+                    }
+                  ],
+                  "text": "Ischemic chest pain"
+                }
+              ],
+              "presentedForm": [
+                {
+                  "contentType": "text/html",
+                  "url": "Binary/ey9R3HQvzT5D6lNvbJeLdyTF10pM-Yzpp1nsL-VLVkJc3",
+                  "title": "Narrative"
+                }
+              ]
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "link": [
+              {
+                "relation": "self",
+                "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/DiagnosticReport/ebLG6RMUaZyb2xk2DuX.kd4g8mNRffn9ftcwqSmnhrwM3"
+              }
+            ],
+            "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/DiagnosticReport/ebLG6RMUaZyb2xk2DuX.kd4g8mNRffn9ftcwqSmnhrwM3",
+            "resource": {
+              "resourceType": "DiagnosticReport",
+              "id": "ebLG6RMUaZyb2xk2DuX.kd4g8mNRffn9ftcwqSmnhrwM3",
+              "identifier": [
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "PLAC",
+                        "display": "Placer Identifier"
+                      }
+                    ],
+                    "text": "Placer Identifier"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.798268",
+                  "value": "1066905"
+                }
+              ],
+              "status": "final",
+              "category": [
+                {
+                  "coding": [
+                    {
+                      "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                      "code": "Lab"
+                    }
+                  ],
+                  "text": "Lab"
+                },
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                      "code": "LAB",
+                      "display": "Laboratory"
+                    }
+                  ],
+                  "text": "Laboratory"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "4548-4"
+                  },
+                  {
+                    "system": "urn:oid:2.16.840.1.113883.6.12",
+                    "code": "83036",
+                    "display": "PR GLYCOSYLATED HEMOGLOBIN TEST"
+                  },
+                  {
+                    "system": "urn:oid:2.16.840.1.113883.6.96",
+                    "code": "43396009",
+                    "display": "HEMOGLOBIN A1C"
+                  }
+                ],
+                "text": "Hemoglobin A1c"
+              },
+              "subject": {
+                "reference": "Patient/erXuFYUfucBZaryVksYEcMg3",
+                "display": "Lopez, Camila Maria"
+              },
+              "effectiveDateTime": "2019-05-28T14:22:00Z",
+              "issued": "2019-05-28T14:22:00Z",
+              "performer": [
+                {
+                  "reference": "Practitioner/eM5CWtq15N0WJeuCet5bJlQ3",
+                  "type": "Practitioner",
+                  "display": "Physician"
+                }
+              ],
+              "result": [
+                {
+                  "reference": "Observation/eyPMWgv2u2RUfsV4p1lLKuUtqyPs2-QNi2zKvbTsFYtRByc6B.cSi1iVU5V2HOpX23",
+                  "display": "Component (1): HEMOGLOBIN A1C, POC"
+                }
+              ]
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "link": [
+              {
+                "relation": "self",
+                "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/DiagnosticReport/e1xW6IyYA20h9CHX4rXDK8wRZibvNskG.0jb.xlYR.OI3"
+              }
+            ],
+            "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/DiagnosticReport/e1xW6IyYA20h9CHX4rXDK8wRZibvNskG.0jb.xlYR.OI3",
+            "resource": {
+              "resourceType": "DiagnosticReport",
+              "id": "e1xW6IyYA20h9CHX4rXDK8wRZibvNskG.0jb.xlYR.OI3",
+              "identifier": [
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "PLAC",
+                        "display": "Placer Identifier"
+                      }
+                    ],
+                    "text": "Placer Identifier"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.798268",
+                  "value": "1159966"
+                }
+              ],
+              "status": "final",
+              "category": [
+                {
+                  "coding": [
+                    {
+                      "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                      "code": "Path,Cyt"
+                    }
+                  ],
+                  "text": "Pathology and Cytology"
+                },
+                {
+                  "coding": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "LP7839-6",
+                      "display": "Pathology"
+                    }
+                  ],
+                  "text": "Pathology"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.840.1.113883.6.12",
+                    "code": "88305",
+                    "display": "PR SURG PATH,LEVEL IV"
+                  }
+                ],
+                "text": "Specimen to pathology"
+              },
+              "subject": {
+                "reference": "Patient/erXuFYUfucBZaryVksYEcMg3",
+                "display": "Lopez, Camila Maria"
+              },
+              "encounter": {
+                "reference": "Encounter/eMT95RPaM-HxLc3NeIA5qlQ3",
+                "identifier": {
+                  "use": "usual",
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.3.698084.8",
+                  "value": "29544"
+                },
+                "display": "Office Visit"
+              },
+              "effectiveDateTime": "2023-06-02T21:02:00Z",
+              "issued": "2023-06-02T21:02:00Z",
+              "performer": [
+                {
+                  "reference": "Practitioner/e2qocqJm-DdjHLS0Not4qjA3",
+                  "type": "Practitioner",
+                  "display": "Historical"
+                }
+              ]
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:983360aa-e6ed-4eb2-9124-5f9eda32207c",
+            "resource": {
+              "resourceType": "OperationOutcome",
+              "issue": [
+                {
+                  "severity": "warning",
+                  "code": "processing",
+                  "details": {
+                    "coding": [
+                      {
+                        "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.657369",
+                        "code": "4119",
+                        "display": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                      }
+                    ],
+                    "text": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                  }
+                }
+              ]
+            },
+            "search": {
+              "mode": "outcome"
+            }
+          }
+        ]
+      },
+      "error": null,
+      "count": 4
+    },
+    "medication_requests": {
+      "status_code": 200,
+      "data": {
+        "resourceType": "Bundle",
+        "type": "searchset",
+        "total": 1,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/MedicationRequest?patient=erXuFYUfucBZaryVksYEcMg3"
+          }
+        ],
+        "entry": [
+          {
+            "link": [
+              {
+                "relation": "self",
+                "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/MedicationRequest/ePDJ.zsf3Jfg2.MKkAMgW9EcIbsaiB.y-OTrPS5v2h8Q3"
+              }
+            ],
+            "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/MedicationRequest/ePDJ.zsf3Jfg2.MKkAMgW9EcIbsaiB.y-OTrPS5v2h8Q3",
+            "resource": {
+              "resourceType": "MedicationRequest",
+              "id": "ePDJ.zsf3Jfg2.MKkAMgW9EcIbsaiB.y-OTrPS5v2h8Q3",
+              "identifier": [
+                {
+                  "use": "usual",
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.798268",
+                  "value": "1066899"
+                }
+              ],
+              "status": "active",
+              "intent": "order",
+              "category": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                      "code": "community",
+                      "display": "Community"
+                    }
+                  ],
+                  "text": "Community"
+                }
+              ],
+              "medicationReference": {
+                "reference": "Medication/ej-bgums0x4N6E0.QqIjJb3kGhOQBVK3lIYjcil9mb9j-ukNrz6P2y90AiDm3R20Y3",
+                "display": "drospirenone-ethinyl estradiol 3-0.02 MG per tablet"
+              },
+              "subject": {
+                "reference": "Patient/erXuFYUfucBZaryVksYEcMg3",
+                "display": "Lopez, Camila Maria"
+              },
+              "authoredOn": "2019-05-28",
+              "requester": {
+                "reference": "Practitioner/eM5CWtq15N0WJeuCet5bJlQ3",
+                "type": "Practitioner",
+                "display": "Physician"
+              },
+              "recorder": {
+                "reference": "Practitioner/eM5CWtq15N0WJeuCet5bJlQ3",
+                "type": "Practitioner",
+                "display": "Physician"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "69878008",
+                      "display": "Polycystic ovaries (disorder)"
+                    },
+                    {
+                      "system": "http://hl7.org/fhir/sid/icd-9-cm",
+                      "code": "256.4",
+                      "display": "Polycystic ovaries"
+                    },
+                    {
+                      "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                      "code": "E28.2",
+                      "display": "Polycystic ovarian syndrome"
+                    }
+                  ],
+                  "text": "Polycystic ovaries"
+                }
+              ],
+              "courseOfTherapyType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+                    "code": "continuous",
+                    "display": "Continuous long term therapy"
+                  }
+                ],
+                "text": "Continuous long term therapy"
+              },
+              "dosageInstruction": [
+                {
+                  "text": "Take 1 tablet by mouth 1 (one) time each day., Starting Tue 5/28/2019, Until Wed 5/27/2020, Normal",
+                  "patientInstruction": "Take 1 tablet by mouth 1 (one) time each day.",
+                  "timing": {
+                    "repeat": {
+                      "boundsPeriod": {
+                        "start": "2019-05-28"
+                      },
+                      "count": 365,
+                      "timeOfDay": [
+                        "09:00:00"
+                      ]
+                    },
+                    "code": {
+                      "text": "1 (one) time each day"
+                    }
+                  },
+                  "asNeededBoolean": false,
+                  "route": {
+                    "coding": [
+                      {
+                        "system": "http://snomed.info/sct",
+                        "code": "260548002",
+                        "display": "Oral (qualifier value)"
+                      },
+                      {
+                        "system": "urn:oid:1.2.840.114350.1.13.0.1.7.4.798268.7025",
+                        "code": "15",
+                        "display": "Oral"
+                      }
+                    ],
+                    "text": "Oral"
+                  },
+                  "method": {
+                    "coding": [
+                      {
+                        "system": "http://snomed.info/sct",
+                        "code": "419652001",
+                        "display": "Take"
+                      }
+                    ],
+                    "text": "Take"
+                  },
+                  "doseAndRate": [
+                    {
+                      "type": {
+                        "coding": [
+                          {
+                            "system": "http://epic.com/CodeSystem/dose-rate-type",
+                            "code": "calculated",
+                            "display": "calculated"
+                          }
+                        ],
+                        "text": "calculated"
+                      },
+                      "doseQuantity": {
+                        "value": 1,
+                        "unit": "tablet",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "{tbl}"
+                      }
+                    },
+                    {
+                      "type": {
+                        "coding": [
+                          {
+                            "system": "http://epic.com/CodeSystem/dose-rate-type",
+                            "code": "admin-amount",
+                            "display": "admin-amount"
+                          }
+                        ],
+                        "text": "admin-amount"
+                      },
+                      "doseQuantity": {
+                        "value": 1,
+                        "unit": "tablet",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "{tbl}"
+                      }
+                    },
+                    {
+                      "type": {
+                        "coding": [
+                          {
+                            "system": "http://epic.com/CodeSystem/dose-rate-type",
+                            "code": "ordered",
+                            "display": "ordered"
+                          }
+                        ],
+                        "text": "ordered"
+                      },
+                      "doseQuantity": {
+                        "value": 1,
+                        "unit": "tablet",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "{tbl}"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "dispenseRequest": {
+                "validityPeriod": {
+                  "start": "2019-05-28"
+                },
+                "numberOfRepeatsAllowed": 12,
+                "quantity": {
+                  "value": 28,
+                  "unit": "tablet"
+                },
+                "expectedSupplyDuration": {
+                  "value": 28,
+                  "unit": "Day",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "d"
+                }
+              }
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:b14d77bb-25af-4bd1-808d-d0401c346826",
+            "resource": {
+              "resourceType": "OperationOutcome",
+              "issue": [
+                {
+                  "severity": "warning",
+                  "code": "processing",
+                  "details": {
+                    "coding": [
+                      {
+                        "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.657369",
+                        "code": "4119",
+                        "display": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                      }
+                    ],
+                    "text": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                  }
+                }
+              ]
+            },
+            "search": {
+              "mode": "outcome"
+            }
+          }
+        ]
+      },
+      "error": null,
+      "count": 1
+    },
+    "medication_statements": {
+      "status_code": 404,
+      "data": {
+        "resourceType": "OperationOutcome",
+        "issue": [
+          {
+            "diagnostics": "Invalid JSON"
+          }
+        ]
+      },
+      "error": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\"/>\r\n<title>404 - File or directory not found.</title>\r\n<style type=\"text/css\">\r\n<!--\r\nbody{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}\r\nfieldset{padding:0 15px 10px 15px;} \r\nh1{font-size:2.4em;margin:0;color:#FFF;}\r\nh2{font-size:1.7em;margin:0;color:#CC0000;} \r\nh3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} \r\n#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:\"trebuchet MS\", Verdana, sans-serif;color:#FFF;\r\nbackground-color:#555555;}\r\n#content{margin:0 0 0 2%;position:relative;}\r\n.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}\r\n-->\r\n</style>\r\n</head>\r\n<body>\r\n<div id=\"header\"><h1>Server Error</h1></div>\r\n<div id=\"content\">\r\n <div class=\"content-container\"><fieldset>\r\n  <h2>404 - File or directory not found.</h2>\r\n  <h3>The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</h3>\r\n </fieldset></div>\r\n</div>\r\n</body>\r\n</html>\r\n",
+      "count": 1
+    },
+    "procedures": {
+      "status_code": 200,
+      "data": {
+        "resourceType": "Bundle",
+        "type": "searchset",
+        "total": 1,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Procedure?patient=erXuFYUfucBZaryVksYEcMg3"
+          }
+        ],
+        "entry": [
+          {
+            "link": [
+              {
+                "relation": "self",
+                "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Procedure/e0ZpcfJHKvPE0nQfie.r1utQLnHC473E7POoGnZIh7yj3wWsggKlPmbROlo9Q5vi-3"
+              }
+            ],
+            "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Procedure/e0ZpcfJHKvPE0nQfie.r1utQLnHC473E7POoGnZIh7yj3wWsggKlPmbROlo9Q5vi-3",
+            "resource": {
+              "resourceType": "Procedure",
+              "id": "e0ZpcfJHKvPE0nQfie.r1utQLnHC473E7POoGnZIh7yj3wWsggKlPmbROlo9Q5vi-3",
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "ORD"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.798268",
+                  "value": "1066915"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "EAP"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.696580",
+                  "value": "104443"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "OPE"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.798069",
+                  "value": "88"
+                }
+              ],
+              "basedOn": [
+                {
+                  "reference": "ServiceRequest/e6t1HtRj0Za8M9Y0u5nU2tu3idJ7P66B2HzlMtddZ6Wc3",
+                  "display": "TRANSTHORACIC ECHO (TTE) COMPLETE"
+                }
+              ],
+              "status": "completed",
+              "category": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "103693007",
+                    "display": "Diagnostic procedure"
+                  }
+                ],
+                "text": "Ordered Procedures"
+              },
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://www.ama-assn.org/go/cpt",
+                    "code": "93306",
+                    "display": "HC TRANSTHORACIC ECHO"
+                  }
+                ],
+                "text": "TRANSTHORACIC ECHO (TTE) COMPLETE"
+              },
+              "subject": {
+                "reference": "Patient/erXuFYUfucBZaryVksYEcMg3",
+                "display": "Lopez, Camila Maria"
+              },
+              "encounter": {
+                "reference": "Encounter/ej567ARSFdaF4ooZVunIlIg3",
+                "identifier": {
+                  "use": "usual",
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.3.698084.8",
+                  "value": "29542"
+                },
+                "display": "Hospital Outpatient Visit"
+              },
+              "performedDateTime": "2023-06-02T20:50:25Z",
+              "asserter": {
+                "reference": "Practitioner/elpRiy0AYgjhdjAhTBJ3Aiw3",
+                "type": "Practitioner",
+                "display": "Np"
+              },
+              "performer": [
+                {
+                  "actor": {
+                    "reference": "Practitioner/eM5CWtq15N0WJeuCet5bJlQ3",
+                    "type": "Practitioner",
+                    "display": "Physician"
+                  },
+                  "onBehalfOf": {
+                    "reference": "Organization/eVUDU8oWh9.KM7oI8Mu9jlqn1C3d5ozeHAXDHuaPYsvU3",
+                    "type": "Organization",
+                    "display": "CPACS"
+                  }
+                }
+              ],
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/icd-9-cm",
+                      "code": "786.50",
+                      "display": "Ischemic chest pain (CMS/HCC)"
+                    }
+                  ],
+                  "text": "Ischemic chest pain"
+                }
+              ],
+              "report": [
+                {
+                  "reference": "DiagnosticReport/ejRFFAyoWd-DvE0lHi4UEUVA9qTH9PxfCLhEetlq04Ck3",
+                  "type": "DiagnosticReport",
+                  "display": "TRANSTHORACIC ECHO (TTE) COMPLETE"
+                }
+              ]
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:34ec9c4b-b711-4b4c-9c6c-c62d75f7c924",
+            "resource": {
+              "resourceType": "OperationOutcome",
+              "issue": [
+                {
+                  "severity": "warning",
+                  "code": "processing",
+                  "details": {
+                    "coding": [
+                      {
+                        "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.657369",
+                        "code": "4119",
+                        "display": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                      }
+                    ],
+                    "text": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                  }
+                }
+              ]
+            },
+            "search": {
+              "mode": "outcome"
+            }
+          }
+        ]
+      },
+      "error": null,
+      "count": 1
+    },
+    "conditions": {
+      "status_code": 200,
+      "data": {
+        "resourceType": "Bundle",
+        "type": "searchset",
+        "total": 2,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Condition?patient=eq081-VQEgP8drUUqCWzHfw3"
+          }
+        ],
+        "entry": [
+          {
+            "link": [
+              {
+                "relation": "self",
+                "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Condition/eVGf2YljIMIk76IcfbNpjWQ3"
+              }
+            ],
+            "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Condition/eVGf2YljIMIk76IcfbNpjWQ3",
+            "resource": {
+              "resourceType": "Condition",
+              "id": "eVGf2YljIMIk76IcfbNpjWQ3",
+              "clinicalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "version": "4.0.0",
+                    "code": "active",
+                    "display": "Active"
+                  }
+                ],
+                "text": "Active"
+              },
+              "verificationStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                    "version": "4.0.0",
+                    "code": "confirmed",
+                    "display": "Confirmed"
+                  }
+                ],
+                "text": "Confirmed"
+              },
+              "category": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                      "code": "problem-list-item",
+                      "display": "Problem List Item"
+                    }
+                  ],
+                  "text": "Problem List Item"
+                },
+                {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                      "code": "sdoh",
+                      "display": "SDOH"
+                    }
+                  ],
+                  "text": "SDOH"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                    "code": "Z91.89",
+                    "display": "Other specified personal risk factors, not elsewhere classified"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "315016007",
+                    "display": "AT RISK OF CORONARY HEART DISEASE"
+                  },
+                  {
+                    "system": "http://hl7.org/fhir/sid/icd-9-cm",
+                    "code": "V49.89",
+                    "display": "Risk for coronary artery disease between 10% and 20% in next 10 years"
+                  },
+                  {
+                    "system": "urn:oid:2.16.840.1.113883.3.247.1.1",
+                    "code": "34908715",
+                    "display": "Risk for coronary artery disease between 10% and 20% in next 10 years"
+                  }
+                ],
+                "text": "Risk for coronary artery disease between 10% and 20% in next 10 years"
+              },
+              "subject": {
+                "reference": "Patient/eq081-VQEgP8drUUqCWzHfw3",
+                "display": "Lin, Derrick"
+              },
+              "onsetDateTime": "2019-05-28",
+              "recordedDate": "2019-05-28"
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "link": [
+              {
+                "relation": "self",
+                "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Condition/eY-LMUKgFarb5r10D5sXS7nGJO9qELcndS5oncvyDjPHp.lFiCEKE6mt2pIDbyFeBHvU6Z0XikLVgIqkXp8XV1Q3"
+              }
+            ],
+            "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Condition/eY-LMUKgFarb5r10D5sXS7nGJO9qELcndS5oncvyDjPHp.lFiCEKE6mt2pIDbyFeBHvU6Z0XikLVgIqkXp8XV1Q3",
+            "resource": {
+              "resourceType": "Condition",
+              "id": "eY-LMUKgFarb5r10D5sXS7nGJO9qELcndS5oncvyDjPHp.lFiCEKE6mt2pIDbyFeBHvU6Z0XikLVgIqkXp8XV1Q3",
+              "clinicalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "version": "4.0.0",
+                    "code": "active",
+                    "display": "Active"
+                  }
+                ],
+                "text": "Active"
+              },
+              "verificationStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                    "version": "4.0.0",
+                    "code": "confirmed",
+                    "display": "Confirmed"
+                  }
+                ],
+                "text": "Confirmed"
+              },
+              "category": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                      "code": "encounter-diagnosis",
+                      "display": "Encounter Diagnosis"
+                    }
+                  ],
+                  "text": "Encounter Diagnosis"
+                },
+                {
+                  "coding": [
+                    {
+                      "system": "http://open.epic.com/FHIR/StructureDefinition/condition-category",
+                      "code": "visit-diagnosis",
+                      "display": "Visit Diagnosis"
+                    }
+                  ],
+                  "text": "Visit Diagnosis"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "315016007",
+                    "display": "At risk of coronary heart disease (finding)"
+                  },
+                  {
+                    "system": "http://hl7.org/fhir/sid/icd-9-cm",
+                    "code": "V49.89",
+                    "display": "Other specified conditions influencing health status(V49.89)"
+                  },
+                  {
+                    "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                    "code": "Z91.89",
+                    "display": "Other specified personal risk factors, not elsewhere classified"
+                  }
+                ],
+                "text": "Risk for coronary artery disease between 10% and 20% in next 10 years"
+              },
+              "subject": {
+                "reference": "Patient/eq081-VQEgP8drUUqCWzHfw3",
+                "display": "Lin, Derrick"
+              },
+              "onsetDateTime": "2019-05-28",
+              "recordedDate": "2019-05-28",
+              "evidence": [
+                {
+                  "detail": [
+                    {
+                      "reference": "Condition/eVGf2YljIMIk76IcfbNpjWQ3",
+                      "display": "Risk for coronary artery disease between 10% and 20% in next 10 years"
+                    }
+                  ]
+                }
+              ]
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:296e7eb5-ff84-4313-909c-d8c5b8009294",
+            "resource": {
+              "resourceType": "OperationOutcome",
+              "issue": [
+                {
+                  "severity": "warning",
+                  "code": "suppressed",
+                  "details": {
+                    "coding": [
+                      {
+                        "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.657369",
+                        "code": "59205",
+                        "display": "The authenticated user's search request applies to a sub-resource that the user is not authorized to view. Results of this sub-type will not be returned."
+                      }
+                    ],
+                    "text": "The authenticated user's search request applies to a sub-resource that the user is not authorized to view. Results of this sub-type will not be returned."
+                  },
+                  "diagnostics": "User not authorized for Condition - Medical History. Search results of this type have not been included."
+                },
+                {
+                  "severity": "warning",
+                  "code": "processing",
+                  "details": {
+                    "coding": [
+                      {
+                        "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.657369",
+                        "code": "4119",
+                        "display": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                      }
+                    ],
+                    "text": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                  }
+                }
+              ]
+            },
+            "search": {
+              "mode": "outcome"
+            }
+          }
+        ]
+      },
+      "error": null,
+      "count": 2
+    },
+    "care_plans": {
+      "status_code": 403,
+      "data": {},
+      "error": "HTTP 403",
+      "count": 0
+    },
+    "goals": {
+      "status_code": 403,
+      "data": {},
+      "error": "HTTP 403",
+      "count": 0
+    },
+    "medications": {
+      "status_code": 400,
+      "data": {
+        "resourceType": "OperationOutcome",
+        "issue": [
+          {
+            "severity": "information",
+            "code": "invalid",
+            "details": {
+              "coding": [
+                {
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.657369",
+                  "code": "59100",
+                  "display": "Content invalid against the specification or a profile."
+                }
+              ],
+              "text": "Content invalid against the specification or a profile."
+            },
+            "diagnostics": "Unknown parameter: PATIENT. Parameter has been ignored."
+          },
+          {
+            "severity": "fatal",
+            "code": "invalid",
+            "details": {
+              "coding": [
+                {
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.657369",
+                  "code": "59102",
+                  "display": "Content invalid against the specification or a profile."
+                }
+              ],
+              "text": "Content invalid against the specification or a profile."
+            },
+            "diagnostics": "Only an _ID search is allowed."
+          }
+        ]
+      },
+      "error": "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"information\",\"code\":\"invalid\",\"details\":{\"coding\":[{\"system\":\"urn:oid:1.2.840.114350.1.13.0.1.7.2.657369\",\"code\":\"59100\",\"display\":\"Content invalid against the specification or a profile.\"}],\"text\":\"Content invalid against the specification or a profile.\"},\"diagnostics\":\"Unknown parameter: PATIENT. Parameter has been ignored.\"},{\"severity\":\"fatal\",\"code\":\"invalid\",\"details\":{\"coding\":[{\"system\":\"urn:oid:1.2.840.114350.1.13.0.1.7.2.657369\",\"code\":\"59102\",\"display\":\"Content invalid against the specification or a profile.\"}],\"text\":\"Content invalid against the specification or a profile.\"},\"diagnostics\":\"Only an _ID search is allowed.\"}]}",
+      "count": 1
+    },
+    "smoking_history": {
+      "status_code": 200,
+      "data": {
+        "resourceType": "Bundle",
+        "type": "searchset",
+        "total": 1,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation?category=social-history&patient=eq081-VQEgP8drUUqCWzHfw3"
+          }
+        ],
+        "entry": [
+          {
+            "link": [
+              {
+                "relation": "self",
+                "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/etP6rPSwDELAWYYJBl49P.NOEzySsT2ymjCFAYsNkTeBm9IH2aYE6ysX.mx0ZysaQ3"
+              }
+            ],
+            "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/etP6rPSwDELAWYYJBl49P.NOEzySsT2ymjCFAYsNkTeBm9IH2aYE6ysX.mx0ZysaQ3",
+            "resource": {
+              "resourceType": "Observation",
+              "id": "etP6rPSwDELAWYYJBl49P.NOEzySsT2ymjCFAYsNkTeBm9IH2aYE6ysX.mx0ZysaQ3",
+              "status": "final",
+              "category": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                      "code": "social-history",
+                      "display": "Social History"
+                    }
+                  ],
+                  "text": "Social History"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "72166-2",
+                    "display": "Tobacco smoking status"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "365980008",
+                    "display": "Finding of tobacco use and exposure (finding)"
+                  }
+                ],
+                "text": "Smoking History"
+              },
+              "subject": {
+                "reference": "Patient/eq081-VQEgP8drUUqCWzHfw3",
+                "display": "Lin, Derrick"
+              },
+              "effectivePeriod": {
+                "start": "1998-01-01",
+                "end": "2016-01-01"
+              },
+              "issued": "2019-05-28T05:00:00Z",
+              "performer": [
+                {
+                  "reference": "Practitioner/eUXiD4IyBLJFoR2VHOjfTdg3",
+                  "display": "Physician"
+                }
+              ],
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "8517006",
+                    "display": "Ex-smoker"
+                  }
+                ],
+                "text": "Former"
+              },
+              "component": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://loinc.org",
+                        "code": "81228-9",
+                        "display": "Tobacco product"
+                      },
+                      {
+                        "system": "http://snomed.info/sct",
+                        "code": "53661000146106",
+                        "display": "Type of tobacco used (observable entity)"
+                      }
+                    ],
+                    "text": "Type"
+                  },
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://snomed.info/sct",
+                        "code": "65568007",
+                        "display": "Cigarette Smoker"
+                      }
+                    ],
+                    "text": "Cigarettes"
+                  }
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://snomed.info/sct",
+                        "code": "401201003",
+                        "display": "Cigarette pack-years (observable entity)"
+                      }
+                    ],
+                    "text": "Cigarette pack-years (observable entity)"
+                  },
+                  "valueQuantity": {
+                    "value": 9,
+                    "unit": "{PackYears}",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{PackYears}"
+                  }
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://loinc.org",
+                        "code": "88029-4",
+                        "display": "Tobacco use duration"
+                      }
+                    ],
+                    "text": "Years Used"
+                  },
+                  "valueQuantity": {
+                    "value": 18,
+                    "unit": "Years Used",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "a"
+                  }
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://loinc.org",
+                        "code": "8663-7",
+                        "display": "Cigarettes smoked current (pack per day) - Reported"
+                      },
+                      {
+                        "system": "http://snomed.info/sct",
+                        "code": "266918002",
+                        "display": "Tobacco smoking consumption (observable entity)"
+                      }
+                    ],
+                    "text": "Packs/Day"
+                  },
+                  "valueQuantity": {
+                    "value": 0.5,
+                    "unit": "Packs/Day",
+                    "system": "http://snomed.info/sct",
+                    "code": "228963008"
+                  }
+                }
+              ]
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:409aee00-c6a6-4639-a1a5-552feccc0a40",
+            "resource": {
+              "resourceType": "OperationOutcome",
+              "issue": [
+                {
+                  "severity": "warning",
+                  "code": "processing",
+                  "details": {
+                    "coding": [
+                      {
+                        "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.657369",
+                        "code": "4119",
+                        "display": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                      }
+                    ],
+                    "text": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                  }
+                }
+              ]
+            },
+            "search": {
+              "mode": "outcome"
+            }
+          }
+        ]
+      },
+      "error": null,
+      "count": 1
+    },
+    "coverage": {
+      "status_code": 200,
+      "data": {
+        "resourceType": "Bundle",
+        "type": "searchset",
+        "total": 0,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Coverage?patient=erXuFYUfucBZaryVksYEcMg3"
+          }
+        ],
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:2b8ba6d5-2daa-43a3-980f-6af450766ef0",
+            "resource": {
+              "resourceType": "OperationOutcome",
+              "issue": [
+                {
+                  "severity": "warning",
+                  "code": "processing",
+                  "details": {
+                    "coding": [
+                      {
+                        "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.657369",
+                        "code": "4101",
+                        "display": "Resource request returns no results."
+                      }
+                    ],
+                    "text": "Resource request returns no results."
+                  }
+                },
+                {
+                  "severity": "warning",
+                  "code": "processing",
+                  "details": {
+                    "coding": [
+                      {
+                        "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.657369",
+                        "code": "4119",
+                        "display": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                      }
+                    ],
+                    "text": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                  }
+                }
+              ]
+            },
+            "search": {
+              "mode": "outcome"
+            }
+          }
+        ]
+      },
+      "error": null,
+      "count": 0
+    },
+    "encounters": {
+      "status_code": 200,
+      "data": {
+        "resourceType": "Bundle",
+        "type": "searchset",
+        "total": 5,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Encounter?patient=erXuFYUfucBZaryVksYEcMg3"
+          }
+        ],
+        "entry": [
+          {
+            "link": [
+              {
+                "relation": "self",
+                "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Encounter/ej567ARSFdaF4ooZVunIlIg3"
+              }
+            ],
+            "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Encounter/ej567ARSFdaF4ooZVunIlIg3",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "ej567ARSFdaF4ooZVunIlIg3",
+              "identifier": [
+                {
+                  "use": "usual",
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.3.698084.8",
+                  "value": "29542"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.13260",
+                "code": "4",
+                "display": "HOV"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.698084.10110",
+                      "code": "102",
+                      "display": "Outpatient"
+                    }
+                  ],
+                  "text": "Outpatient"
+                },
+                {
+                  "coding": [
+                    {
+                      "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.698084.30",
+                      "code": "3",
+                      "display": "Hospital Encounter"
+                    }
+                  ],
+                  "text": "Hospital Encounter"
+                },
+                {
+                  "coding": [
+                    {
+                      "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.808267",
+                      "code": "10023",
+                      "display": "Transthoracic Echocardiogram Complete"
+                    }
+                  ],
+                  "text": "Transthoracic Echocardiogram Complete"
+                }
+              ],
+              "subject": {
+                "reference": "Patient/erXuFYUfucBZaryVksYEcMg3",
+                "display": "Lopez, Camila Maria"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "REF",
+                          "display": "referrer"
+                        }
+                      ],
+                      "text": "referrer"
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/elpRiy0AYgjhdjAhTBJ3Aiw3",
+                    "type": "Practitioner",
+                    "display": "Np"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2023-06-02T20:49:58Z"
+              },
+              "account": [
+                {
+                  "identifier": {
+                    "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.726582",
+                    "value": "1000501"
+                  },
+                  "display": "LOPEZ,CAMILA MARIA"
+                }
+              ],
+              "hospitalization": {
+                "extension": [
+                  {
+                    "valueDateTime": "2023-06-02T20:49:00Z",
+                    "url": "http://open.epic.com/FHIR/StructureDefinition/extension/observation-datetime"
+                  }
+                ]
+              },
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/exzJSfs-2YYqMPilpdzkcdMVzw6TB9WJfeqFRVe.cpSo3",
+                    "display": "EMC Cardiology Procedures"
+                  },
+                  "period": {
+                    "start": "2023-06-02T20:49:00Z"
+                  }
+                },
+                {
+                  "location": {
+                    "reference": "Location/exzJSfs-2YYqMPilpdzkcdMVzw6TB9WJfeqFRVe.cpSo3",
+                    "display": "EMC Cardiology Procedures"
+                  }
+                },
+                {
+                  "location": {
+                    "reference": "Location/eQSOrLdbVrMRc68KBcTBG4A3",
+                    "display": "Epic Hospital System"
+                  }
+                }
+              ]
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "link": [
+              {
+                "relation": "self",
+                "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Encounter/eoIRZgvu9RhrwOzDlZkRbSg3"
+              }
+            ],
+            "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Encounter/eoIRZgvu9RhrwOzDlZkRbSg3",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "eoIRZgvu9RhrwOzDlZkRbSg3",
+              "identifier": [
+                {
+                  "use": "usual",
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.3.698084.8",
+                  "value": "29541"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.13260",
+                "code": "4",
+                "display": "HOV"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.698084.10110",
+                      "code": "102",
+                      "display": "Outpatient"
+                    }
+                  ],
+                  "text": "Outpatient"
+                },
+                {
+                  "coding": [
+                    {
+                      "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.698084.30",
+                      "code": "3",
+                      "display": "Hospital Encounter"
+                    }
+                  ],
+                  "text": "Hospital Encounter"
+                },
+                {
+                  "coding": [
+                    {
+                      "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.808267",
+                      "code": "1053001",
+                      "display": "X-Ray Exam"
+                    }
+                  ],
+                  "text": "X-Ray Exam"
+                }
+              ],
+              "subject": {
+                "reference": "Patient/erXuFYUfucBZaryVksYEcMg3",
+                "display": "Lopez, Camila Maria"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "REF",
+                          "display": "referrer"
+                        }
+                      ],
+                      "text": "referrer"
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/elpRiy0AYgjhdjAhTBJ3Aiw3",
+                    "type": "Practitioner",
+                    "display": "Np"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2023-06-02T20:41:08Z"
+              },
+              "account": [
+                {
+                  "identifier": {
+                    "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.726582",
+                    "value": "1000501"
+                  },
+                  "display": "LOPEZ,CAMILA MARIA"
+                }
+              ],
+              "hospitalization": {
+                "extension": [
+                  {
+                    "valueDateTime": "2023-06-02T20:41:00Z",
+                    "url": "http://open.epic.com/FHIR/StructureDefinition/extension/observation-datetime"
+                  }
+                ]
+              },
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/e6.GHPEJ3Jrk18e14wi2AJ5vFRqvLa0ZB6qH40N4UgB03",
+                    "display": "EMH X-Ray Imaging"
+                  },
+                  "period": {
+                    "start": "2023-06-02T20:41:00Z"
+                  }
+                },
+                {
+                  "location": {
+                    "reference": "Location/e6.GHPEJ3Jrk18e14wi2AJ5vFRqvLa0ZB6qH40N4UgB03",
+                    "display": "EMH X-Ray Imaging"
+                  }
+                },
+                {
+                  "location": {
+                    "reference": "Location/eQSOrLdbVrMRc68KBcTBG4A3",
+                    "display": "Epic Hospital System"
+                  }
+                }
+              ]
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "link": [
+              {
+                "relation": "self",
+                "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Encounter/exfbAtPCSLnf8s.193aMUnQ3"
+              }
+            ],
+            "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Encounter/exfbAtPCSLnf8s.193aMUnQ3",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "exfbAtPCSLnf8s.193aMUnQ3",
+              "identifier": [
+                {
+                  "use": "usual",
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.3.698084.8",
+                  "value": "29539"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.13260",
+                "code": "13",
+                "display": "Support OP Encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.698084.30",
+                      "code": "101",
+                      "display": "Office Visit"
+                    }
+                  ],
+                  "text": "Office Visit"
+                },
+                {
+                  "coding": [
+                    {
+                      "system": "http://www.ama-assn.org/go/cpt",
+                      "code": "99211",
+                      "display": "PR OFFICE OUTPATIENT VISIT 5 MINUTES"
+                    }
+                  ],
+                  "text": "PR OFFICE OUTPATIENT VISIT 5 MINUTES"
+                }
+              ],
+              "subject": {
+                "reference": "Patient/erXuFYUfucBZaryVksYEcMg3",
+                "display": "Lopez, Camila Maria"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "text": "losAuthorizingPhysician"
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/eM5CWtq15N0WJeuCet5bJlQ3",
+                    "type": "Practitioner",
+                    "display": "Physician"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "PART",
+                          "display": "Participation"
+                        }
+                      ],
+                      "text": "Participation"
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/eM5CWtq15N0WJeuCet5bJlQ3",
+                    "display": "Physician"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2023-05-21",
+                "end": "2023-05-21"
+              },
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/e4W4rmGe9QzuGm2Dy4NBqVc0KDe6yGld6HW95UuN-Qd03",
+                    "display": "EMC Family Medicine"
+                  }
+                }
+              ]
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "link": [
+              {
+                "relation": "self",
+                "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Encounter/eMT95RPaM-HxLc3NeIA5qlQ3"
+              }
+            ],
+            "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Encounter/eMT95RPaM-HxLc3NeIA5qlQ3",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "eMT95RPaM-HxLc3NeIA5qlQ3",
+              "identifier": [
+                {
+                  "use": "usual",
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.3.698084.8",
+                  "value": "29544"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.13260",
+                "code": "13",
+                "display": "Support OP Encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.698084.30",
+                      "code": "101",
+                      "display": "Office Visit"
+                    }
+                  ],
+                  "text": "Office Visit"
+                }
+              ],
+              "subject": {
+                "reference": "Patient/erXuFYUfucBZaryVksYEcMg3",
+                "display": "Lopez, Camila Maria"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "PART",
+                          "display": "Participation"
+                        }
+                      ],
+                      "text": "Participation"
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/eM5CWtq15N0WJeuCet5bJlQ3",
+                    "display": "Physician"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2023-06-02",
+                "end": "2023-06-02"
+              },
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/e4W4rmGe9QzuGm2Dy4NBqVc0KDe6yGld6HW95UuN-Qd03",
+                    "display": "EMC Family Medicine"
+                  }
+                }
+              ]
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "link": [
+              {
+                "relation": "self",
+                "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Encounter/eGmO0h.1.UQQrExl4bfM7OQ3"
+              }
+            ],
+            "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Encounter/eGmO0h.1.UQQrExl4bfM7OQ3",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "eGmO0h.1.UQQrExl4bfM7OQ3",
+              "identifier": [
+                {
+                  "use": "usual",
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.3.698084.8",
+                  "value": "29545"
+                }
+              ],
+              "status": "unknown",
+              "class": {
+                "system": "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.13260",
+                "code": "10",
+                "display": "Surgery Log"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.698084.30",
+                      "code": "51",
+                      "display": "Surgery"
+                    }
+                  ],
+                  "text": "Surgery"
+                }
+              ],
+              "subject": {
+                "reference": "Patient/erXuFYUfucBZaryVksYEcMg3",
+                "display": "Lopez, Camila Maria"
+              },
+              "participant": [
+                {
+                  "individual": {
+                    "reference": "Practitioner/eM5CWtq15N0WJeuCet5bJlQ3",
+                    "type": "Practitioner",
+                    "display": "Physician"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2023-06-06T16:20:00Z",
+                "end": "2023-06-06T17:35:00Z"
+              },
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/efR3SIdpRKF9BFBM5qakt9F5X1mWxjiAGu2hNTKbqOdI3",
+                    "display": "EMH Operating Room"
+                  }
+                }
+              ]
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:f4c1b5cd-3797-4c6d-8ef3-11c9d32b3a9d",
+            "resource": {
+              "resourceType": "OperationOutcome",
+              "issue": [
+                {
+                  "severity": "warning",
+                  "code": "suppressed",
+                  "details": {
+                    "coding": [
+                      {
+                        "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.657369",
+                        "code": "59204",
+                        "display": "The authenticated client's search request applies to a sub-resource that the client is not authorized for. Results of this sub-type will not be returned."
+                      }
+                    ],
+                    "text": "The authenticated client's search request applies to a sub-resource that the client is not authorized for. Results of this sub-type will not be returned."
+                  },
+                  "diagnostics": "Client not authorized for Encounter - Outside Record. Search results of this type have not been included."
+                },
+                {
+                  "severity": "warning",
+                  "code": "processing",
+                  "details": {
+                    "coding": [
+                      {
+                        "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.657369",
+                        "code": "4119",
+                        "display": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                      }
+                    ],
+                    "text": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                  }
+                }
+              ]
+            },
+            "search": {
+              "mode": "outcome"
+            }
+          }
+        ]
+      },
+      "error": null,
+      "count": 5
+    },
+    "practitioners": {
+      "status_code": 200,
+      "data": {
+        "resourceType": "Bundle",
+        "type": "collection",
+        "total": 3,
+        "entry": [
+          {
+            "resource": {
+              "resourceType": "Practitioner",
+              "id": "eM5CWtq15N0WJeuCet5bJlQ3",
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "NPI"
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-npi",
+                  "value": "1627363736"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "INTERNAL"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.697780",
+                  "value": "  FAMMD"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "EXTERNAL"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.697780",
+                  "value": "FAMMD"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "PROVID"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.6",
+                  "value": "1000"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "EPIC"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.7",
+                  "value": "207Q00000X"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "NPI"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.60",
+                  "value": "1627363736"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "Epic"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.63",
+                  "value": "6011"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "INTERNAL"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.836982",
+                  "value": "   E1000"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "EXTERNAL"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.836982",
+                  "value": "E1000"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "usual",
+                  "text": "Physician",
+                  "given": [
+                    "Physician"
+                  ],
+                  "_family": {
+                    "extension": [
+                      {
+                        "valueCode": "masked",
+                        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "gender": "male",
+              "photo": [
+                {
+                  "url": "Binary/esQeLhUcHfUSQnyrAJ7GV7A3"
+                }
+              ]
+            }
+          },
+          {
+            "resource": {
+              "resourceType": "Practitioner",
+              "id": "elpRiy0AYgjhdjAhTBJ3Aiw3",
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "NPI"
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-npi",
+                  "value": "1400103994"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "PROVID"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.6",
+                  "value": "400103"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "EPIC"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.7",
+                  "value": "207Q00000X"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "NPI"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.60",
+                  "value": "1400103994"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "Epic"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.63",
+                  "value": "TEMP400103"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "INTERNAL"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.836982",
+                  "value": " E400103"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "EXTERNAL"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.836982",
+                  "value": "E400103"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "usual",
+                  "text": "Np",
+                  "given": [
+                    "Np"
+                  ],
+                  "_family": {
+                    "extension": [
+                      {
+                        "valueCode": "masked",
+                        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "resource": {
+              "resourceType": "Practitioner",
+              "id": "e2qocqJm-DdjHLS0Not4qjA3",
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "NPI"
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-npi",
+                  "value": "1101299992"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "EPIC"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.7",
+                  "value": "208D00000X"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "NPI"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.60",
+                  "value": "1101299992"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "Epic"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.63",
+                  "value": "830"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "INTERNAL"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.836982",
+                  "value": "   E1012"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "EXTERNAL"
+                  },
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.836982",
+                  "value": "E1012"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "usual",
+                  "text": "Historical",
+                  "given": [
+                    "Historical"
+                  ],
+                  "_family": {
+                    "extension": [
+                      {
+                        "valueCode": "masked",
+                        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "error": "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"information\",\"code\":\"invalid\",\"details\":{\"coding\":[{\"system\":\"urn:oid:1.2.840.114350.1.13.0.1.7.2.657369\",\"code\":\"59100\",\"display\":\"Content invalid against the specification or a profile.\"}],\"text\":\"Content invalid against the specification or a profile.\"},\"diagnostics\":\"Unknown parameter: PATIENT. Parameter has been ignored.\"},{\"severity\":\"fatal\",\"code\":\"required\",\"details\":{\"coding\":[{\"system\":\"urn:oid:1.2.840.114350.1.13.0.1.7.2.657369\",\"code\":\"59108\",\"display\":\"A required element is missing.\"}],\"text\":\"A required element is missing.\"},\"diagnostics\":\"Either name, family, or identifier is a required parameter.\"}]}",
+      "count": 3
+    },
+    "locations": {
+      "status_code": 200,
+      "data": {
+        "resourceType": "Bundle",
+        "type": "collection",
+        "total": 5,
+        "entry": [
+          {
+            "resource": {
+              "resourceType": "Location",
+              "id": "efR3SIdpRKF9BFBM5qakt9F5X1mWxjiAGu2hNTKbqOdI3",
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "NPI"
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-npi",
+                  "value": "1627363736"
+                }
+              ],
+              "status": "active",
+              "name": "EMH Operating Room",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set",
+                      "code": "21",
+                      "display": "Inpatient Hospital"
+                    }
+                  ],
+                  "text": "Inpatient Hospital"
+                }
+              ],
+              "address": {
+                "line": [
+                  "123 Anywhere Street"
+                ],
+                "city": "VERONA",
+                "state": "WI",
+                "postalCode": "53593-9179"
+              }
+            }
+          },
+          {
+            "resource": {
+              "resourceType": "Location",
+              "id": "eQSOrLdbVrMRc68KBcTBG4A3",
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "NPI"
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-npi",
+                  "value": "1627363736"
+                }
+              ],
+              "status": "active",
+              "name": "EHS Service Area",
+              "mode": "instance",
+              "address": {
+                "line": [
+                  "123 Anywhere St."
+                ],
+                "city": "VERONA",
+                "state": "WI",
+                "postalCode": "53593"
+              }
+            }
+          },
+          {
+            "resource": {
+              "resourceType": "Location",
+              "id": "e4W4rmGe9QzuGm2Dy4NBqVc0KDe6yGld6HW95UuN-Qd03",
+              "name": "EMC Family Medicine",
+              "mode": "instance"
+            }
+          },
+          {
+            "resource": {
+              "resourceType": "Location",
+              "id": "e6.GHPEJ3Jrk18e14wi2AJ5vFRqvLa0ZB6qH40N4UgB03",
+              "name": "EMH X-Ray Imaging",
+              "mode": "instance"
+            }
+          },
+          {
+            "resource": {
+              "resourceType": "Location",
+              "id": "exzJSfs-2YYqMPilpdzkcdMVzw6TB9WJfeqFRVe.cpSo3",
+              "name": "EMC Cardiology Procedures",
+              "mode": "instance"
+            }
+          }
+        ]
+      },
+      "error": null,
+      "count": 5
+    }
+  },
+  "_master_note": "Synthetic master from slots [1, 2]: per resource type, the block holding the most detailed resource (richest, qty+days for meds), reordered richest-first.",
+  "_master_sources": {
+    "patient": {
+      "slot": 1,
+      "best_detail": 127,
+      "count": 1
+    },
+    "observations": {
+      "slot": 1,
+      "best_detail": 29,
+      "count": 2
+    },
+    "reports": {
+      "slot": 1,
+      "best_detail": 76,
+      "count": 5
+    },
+    "medication_requests": {
+      "slot": 1,
+      "best_detail": 1400086,
+      "count": 2
+    },
+    "medication_statements": {
+      "slot": 1,
+      "best_detail": 2,
+      "count": 1
+    },
+    "procedures": {
+      "slot": 1,
+      "best_detail": 49,
+      "count": 2
+    },
+    "conditions": {
+      "slot": 2,
+      "best_detail": 37,
+      "count": 3
+    },
+    "care_plans": {
+      "slot": 1,
+      "best_detail": 0,
+      "count": 0
+    },
+    "goals": {
+      "slot": 1,
+      "best_detail": 0,
+      "count": 0
+    },
+    "medications": {
+      "slot": 1,
+      "best_detail": 15,
+      "count": 1
+    },
+    "smoking_history": {
+      "slot": 2,
+      "best_detail": 63,
+      "count": 2
+    },
+    "coverage": {
+      "slot": 1,
+      "best_detail": 13,
+      "count": 1
+    },
+    "encounters": {
+      "slot": 1,
+      "best_detail": 43,
+      "count": 6
+    },
+    "practitioners": {
+      "slot": 1,
+      "best_detail": 46,
+      "count": 3
+    },
+    "locations": {
+      "slot": 1,
+      "best_detail": 17,
+      "count": 5
+    }
+  }
+}

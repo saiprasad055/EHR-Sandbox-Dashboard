@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prior Authorization — Sandbox</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}" />
+</head>
+<body class="page-workspace">
+{% macro status_icon(status, note=none) -%}
+<span class="field-status {{ status }}" title="{% if status == 'ok' %}Found{% elif status == 'maybe' %}Not in this sample — obtainable from {{ note.resource }} · {{ note.path }}{% else %}Not found{% endif %}" aria-label="{% if status == 'ok' %}Found{% elif status == 'maybe' %}Obtainable{% else %}Not found{% endif %}">{{ '✗' if status == 'no' else '✓' }}</span>
+{%- endmacro %}
+{% macro field_status(field_id, found) -%}
+{%- set _note = gettable.get(field_id) if gettable else none -%}
+{{- 'ok' if found else ('maybe' if _note else 'no') -}}
+{%- endmacro %}
+{% macro prov_input(field_id, label, req=false, multiline=false, rows=2) -%}
+{% set _val = flat[field_id] %}
+{% set _found = (_val is not none) and ((_val | string | trim) != '') %}
+{% set _note = (gettable.get(field_id) if gettable else none) %}
+{% set _status = 'ok' if _found else ('maybe' if _note else 'no') %}
+<div class="field field-prov{% if is_master %} status-{{ _status }}{% endif %}" data-field="{{ field_id }}">
+  <div class="field-label-row">
+    <label>{{ label }}{% if req %} <span class="req">*</span>{% endif %}</label>
+    {% if is_master %}{{ status_icon(_status, _note) }}{% endif %}
+    <span class="tip-anchor">
+      <button type="button" class="info-tip" aria-label="Data source" aria-expanded="false">i</button>
+      <div class="tip-card" hidden>
+        <div class="tip-row"><span class="tip-k">Resource</span> <span class="tip-v tip-resource"></span></div>
+        <div class="tip-row"><span class="tip-k">Data point</span> <span class="tip-v tip-path"></span></div>
+      </div>
+    </span>
+  </div>
+  {% if multiline %}
+  <textarea readonly rows="{{ rows }}">{{ flat[field_id] }}</textarea>
+  {% else %}
+  <input type="text" readonly value="{{ flat[field_id] }}" />
+  {% endif %}
+</div>
+{%- endmacro %}
+  <aside class="rail" aria-label="EHR workspace">
+    <nav class="rail-ehr-nav">
+      {% for id in ehrs %}
+      <a
+        class="rail-ehr{% if id == ehr %} active{% endif %}"
+        href="{{ url_for('workspace', ehr=id) }}"
+        title="{{ id | upper }}"
+        {% if id == ehr %}aria-current="page"{% endif %}
+      >
+        <img src="{{ url_for('static', filename='logos/' ~ id ~ '.png') }}" alt="" width="40" height="40" />
+      </a>
+      {% endfor %}
+    </nav>
+    <div class="rail-footer">
+      <a class="rail-footer-link" href="{{ url_for('logout_session') }}" title="Logout">⎋</a>
+    </div>
+  </aside>
+
+  <div class="main-shell">
+    <header class="top-bar">
+      <div class="top-left">
+        <a class="back-link" href="{{ url_for('home') }}">← Go Back</a>
+        <div class="title-user-row">
+          <h1 class="form-title">Prior Authorization Form</h1>
+          {% if user_options and user_options|length > 1 %}
+          <div class="user-slot-wrap">
+            <label for="user-slot-select" class="user-slot-label">Test user</label>
+            <select id="user-slot-select" class="user-slot-select" aria-label="Switch test user">
+              {% for u in user_options %}
+              <option
+                value="{{ url_for('workspace', ehr=ehr, slot=u.slot) }}"
+                {% if u.slot == current_slot %}selected{% endif %}
+              >{% if u.is_master %}{{ u.label }}{% else %}{{ u.label }} (#{{ u.slot }}){% endif %}</option>
+              {% endfor %}
+            </select>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </header>
+
+    {% if error %}
+    <div class="alert alert-warn">{{ error }}</div>
+    {% endif %}
+
+    <div class="form-layout">
+      <div class="form-scroll">
+        <section class="panel" id="sec-medication">
+          <div class="panel-head">
+            <h2>Medication</h2>
+          </div>
+          {{ prov_input("drug_name", "Medication Name") }}
+        </section>
+
+        <section class="panel" id="sec-patient">
+          <div class="panel-head"><h2>Patient Information</h2></div>
+          <div class="grid-3">
+            {{ prov_input("first_name", "First Name", req=true) }}
+            {{ prov_input("middle_name", "Middle Name") }}
+            {{ prov_input("last_name", "Last Name", req=true) }}
+          </div>
+          <div class="grid-2">
+            {{ prov_input("gender", "Gender") }}
+            {{ prov_input("date_of_birth", "Date of Birth") }}
+          </div>
+          <div class="grid-2">
+            {{ prov_input("member_id", "Member ID") }}
+            {{ prov_input("patient_mrn_provider", "Patient MRN (provider)") }}
+          </div>
+          <div class="subpanel">
+            <div class="grid-2">
+              {{ prov_input("address_line_1", "Address Line 1") }}
+              {{ prov_input("address_line_2", "Address Line 2") }}
+            </div>
+            <div class="grid-3">
+              {{ prov_input("city", "City") }}
+              {{ prov_input("state", "State") }}
+              {{ prov_input("zip_code", "ZIP Code") }}
+            </div>
+            {{ prov_input("phone_number", "Phone Number") }}
+          </div>
+        </section>
+
+        <section class="panel" id="sec-drug">
+          <div class="panel-head">
+            <h2>Drug Information</h2>
+          </div>
+          {{ prov_input("drug_name", "Drug Name") }}
+          {{ prov_input("dosing_schedule", "Dosing Schedule", multiline=true, rows=2) }}
+          <div class="grid-3">
+            {{ prov_input("quantity", "Quantity") }}
+            {{ prov_input("dosing_form", "Dosing Form") }}
+            {{ prov_input("days_of_supply", "Days of Supply") }}
+          </div>
+          <div class="grid-2">
+            <div class="subpanel">
+              <h3 class="subhead">Primary Diagnosis</h3>
+              {{ prov_input("primary_icd_code", "ICD Code") }}
+              {% set _pd = flat.primary_description or flat.primary_diagnosis %}
+              {% set _pd_found = (_pd is not none) and ((_pd | string | trim) != '') %}
+              <div class="field field-prov{% if is_master %} status-{{ 'ok' if _pd_found else 'no' }}{% endif %}" data-field="primary_description">
+                <div class="field-label-row">
+                  <label>Description</label>
+                  {% if is_master %}{{ status_icon('ok' if _pd_found else 'no') }}{% endif %}
+                  <span class="tip-anchor">
+                    <button type="button" class="info-tip" aria-label="Data source" aria-expanded="false">i</button>
+                    <div class="tip-card" hidden>
+                      <div class="tip-row"><span class="tip-k">Resource</span> <span class="tip-v tip-resource"></span></div>
+                      <div class="tip-row"><span class="tip-k">Data point</span> <span class="tip-v tip-path"></span></div>
+                    </div>
+                  </span>
+                </div>
+                <input type="text" readonly value="{{ flat.primary_description or flat.primary_diagnosis }}" />
+              </div>
+            </div>
+            <div class="subpanel">
+              <h3 class="subhead">Secondary Diagnosis</h3>
+              {{ prov_input("secondary_icd_code", "ICD Code") }}
+              {{ prov_input("secondary_diagnosis", "Description") }}
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="sec-provider">
+          <div class="panel-head"><h2>Provider Information</h2></div>
+          <div class="grid-2">
+            {{ prov_input("npi", "NPI", req=true) }}
+            {{ prov_input("date_of_service", "Date of Service", req=true) }}
+          </div>
+          <div class="grid-2">
+            {{ prov_input("provider_first_name", "First Name", req=true) }}
+            {{ prov_input("provider_last_name", "Last Name", req=true) }}
+          </div>
+          <div class="subpanel">
+            <h3 class="subhead">Rendering provider address</h3>
+            {{ prov_input("provider_address_line", "Address Line") }}
+            <div class="grid-3">
+              {{ prov_input("provider_city", "City") }}
+              {{ prov_input("provider_state", "State") }}
+              {{ prov_input("provider_zip", "ZIP Code") }}
+            </div>
+            <div class="grid-2">
+              {{ prov_input("provider_phone", "Phone Number") }}
+              {{ prov_input("provider_fax", "Fax Number") }}
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="sec-clinical">
+          <div class="panel-head"><h2>Miscellaneous information</h2></div>
+          {{ prov_input("clinical_notes", "Clinical Notes", multiline=true, rows=3) }}
+          {{ prov_input("lab_reports", "Lab / Reports", multiline=true, rows=4) }}
+          <div class="grid-2">
+            {{ prov_input("is_substitution_allowed", "Is substitution allowed?") }}
+            {{ prov_input("prescription_generic", "Prescription / generic") }}
+          </div>
+          <div class="grid-2">
+            {{ prov_input("drug_instructions", "Drug Instructions", multiline=true, rows=2) }}
+            {{ prov_input("dispense_amount", "Dispense amount") }}
+          </div>
+        </section>
+
+        {% if is_master %}
+        <p class="master-legend">
+          <span class="field-status maybe" aria-hidden="true"></span>
+          <span><strong>Yellow tick:</strong> These fields are not present in the sample outputs but are available within the EHR.</span>
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.__FIELD_SRC__ = {{ (field_src or {}) | tojson }};
+  </script>
+  <script src="{{ url_for('static', filename='workspace.js') }}"></script>
+</body>
+</html>

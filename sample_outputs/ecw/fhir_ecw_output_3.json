@@ -1,0 +1,1369 @@
+{
+  "saved_at": "2026-06-10T17:01:15.691841+00:00",
+  "app_type": "emr_ehr_launch",
+  "client_id": "XhftKiWxNQICvuPJs1zkYA5PxeQ9aN1Ve9gFg2dTXtc",
+  "patient_id": "Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+  "patient_summary": {
+    "name": "GH PatientThree",
+    "id": "Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+    "gender": "male",
+    "birthDate": "1991-03-06"
+  },
+  "urls": {
+    "emr_launch_url_registered": "https://floss-ruined-zit.ngrok-free.dev/",
+    "redirect_uri": "https://floss-ruined-zit.ngrok-free.dev/callback",
+    "iss_raw": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD",
+    "fhir_base_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD",
+    "metadata_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/metadata",
+    "smart_configuration_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/.well-known/smart-configuration",
+    "authorization_endpoint": "https://staging-oauthserver.ecwcloud.com/oauth/oauth2/authorize",
+    "token_endpoint": "https://staging-oauthserver.ecwcloud.com/oauth/oauth2/token",
+    "patient_resource_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Patient/Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+  },
+  "scopes": [
+    "patient/CarePlan.read",
+    "patient/CareTeam.read",
+    "patient/Condition.read",
+    "patient/Coverage.read",
+    "patient/DiagnosticReport.read",
+    "patient/DocumentReference.read",
+    "patient/Encounter.read",
+    "patient/Location.read",
+    "patient/Medication.read",
+    "patient/MedicationAdministration.read",
+    "patient/MedicationDispense.read",
+    "patient/MedicationRequest.read",
+    "patient/Observation.read",
+    "patient/Patient.read",
+    "patient/Practitioner.read",
+    "patient/PractitionerRole.read",
+    "patient/RelatedPerson.read",
+    "patient/ServiceRequest.read"
+  ],
+  "oauth_scope": "launch openid profile patient/CarePlan.read patient/CareTeam.read patient/Condition.read patient/Coverage.read patient/DiagnosticReport.read patient/DocumentReference.read patient/Encounter.read patient/Location.read patient/Medication.read patient/MedicationAdministration.read patient/MedicationDispense.read patient/MedicationRequest.read patient/Observation.read patient/Patient.read patient/Practitioner.read patient/PractitionerRole.read patient/RelatedPerson.read patient/ServiceRequest.read",
+  "resources": [
+    {
+      "resource_type": "Patient",
+      "status": "ok",
+      "count": 1,
+      "rows": [
+        {
+          "id": "Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+          "name": "GH PatientThree",
+          "gender": "male",
+          "birthDate": "1991-03-06",
+          "active": true
+        }
+      ],
+      "columns": [
+        "id",
+        "name",
+        "gender",
+        "birthDate",
+        "active"
+      ],
+      "message": null,
+      "raw": {
+        "resourceType": "Patient",
+        "id": "Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+        "meta": {
+          "lastUpdated": "2024-03-15T09:01:11.000-04:00",
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "1002-5",
+                  "display": "American Indian or Alaska Native"
+                }
+              },
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "1006-6",
+                  "display": "Abenaki"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "American Indian or Alaska Native"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2138-6",
+                  "display": "Andalusian"
+                }
+              },
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2135-2",
+                  "display": "Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
+              }
+            ]
+          },
+          {
+            "url": "http://eclinicalworks.com/supportingInfo/patient/advanceDirectives",
+            "extension": [
+              {
+                "url": "http://eclinicalworks.com/supportingInfo/patientdemographics/roi",
+                "valueString": "Y - Yes, Release Allowed"
+              },
+              {
+                "url": "http://eclinicalworks.com/supportingInfo/patientdemographics/rxconsent",
+                "valueString": "U - Rx history consent unasked to the patient"
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "urn:oid:2.16.840.1.113883.4.391.329155",
+            "value": "Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+          },
+          {
+            "use": "secondary",
+            "system": "urn:oid:2.16.840.1.113883.4.391.329155",
+            "value": "9167"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "text": "GH PatientThree",
+            "family": "GH",
+            "given": [
+              "PatientThree"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1991-03-06",
+        "address": [
+          {
+            "use": "home",
+            "type": "both",
+            "text": "Dallas, AA, 12345, US",
+            "city": "Dallas",
+            "state": "AA",
+            "postalCode": "12345",
+            "country": "US"
+          },
+          {
+            "use": "old",
+            "text": "US",
+            "country": "US"
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "ab",
+                  "display": "Abkhazian"
+                }
+              ],
+              "text": "Abkhazian"
+            }
+          }
+        ]
+      },
+      "scope": "patient/Patient.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Patient/Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Patient/Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+      ]
+    },
+    {
+      "resource_type": "CarePlan",
+      "status": "error",
+      "count": 0,
+      "rows": [],
+      "columns": [],
+      "message": "HTTP 400: {\n  \"resourceType\": \"OperationOutcome\",\n  \"issue\": [ {\n    \"severity\": \"error\",\n    \"code\": \"processing\",\n    \"diagnostics\": \"Invalid request: Does not know how to handle get operation with parameter [patient]\"\n  } ]\n}",
+      "raw": {
+        "resourceType": "OperationOutcome",
+        "issue": [
+          {
+            "severity": "error",
+            "code": "processing",
+            "diagnostics": "Invalid request: Does not know how to handle get operation with parameter [patient]"
+          }
+        ]
+      },
+      "scope": "patient/CarePlan.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/CarePlan?subject=Patient/Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw \u2192 https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/CarePlan?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/CarePlan?subject=Patient/Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/CarePlan?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+      ]
+    },
+    {
+      "resource_type": "CareTeam",
+      "status": "error",
+      "count": 0,
+      "rows": [],
+      "columns": [],
+      "message": "HTTP 400: {\n  \"resourceType\": \"OperationOutcome\",\n  \"issue\": [ {\n    \"severity\": \"error\",\n    \"code\": \"processing\",\n    \"diagnostics\": \"Invalid request: Does not know how to handle get operation with parameter [patient]\"\n  } ]\n}",
+      "raw": {
+        "resourceType": "OperationOutcome",
+        "issue": [
+          {
+            "severity": "error",
+            "code": "processing",
+            "diagnostics": "Invalid request: Does not know how to handle get operation with parameter [patient]"
+          }
+        ]
+      },
+      "scope": "patient/CareTeam.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/CareTeam?subject=Patient/Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw \u2192 https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/CareTeam?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/CareTeam?subject=Patient/Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/CareTeam?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+      ]
+    },
+    {
+      "resource_type": "Condition",
+      "status": "ok",
+      "count": 1,
+      "rows": [
+        {
+          "id": "Lt2IFR5Ah76n4d8TFP5gBBI9rnFmRI4cri9d5bAKbiprU6ffpaePgZ.7RqjoqDCu",
+          "condition": "Abdominal actinomycosis",
+          "status": "Active",
+          "onset": "2024-03-01T09:35:00-05:00"
+        }
+      ],
+      "columns": [
+        "id",
+        "condition",
+        "status",
+        "onset"
+      ],
+      "message": null,
+      "raw": {
+        "resourceType": "Bundle",
+        "id": "ab14c9e4-9521-471b-bb01-525cd963b15f",
+        "meta": {
+          "lastUpdated": "2026-06-10T13:00:48.199-04:00"
+        },
+        "type": "searchset",
+        "total": 1,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Condition?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+          }
+        ],
+        "entry": [
+          {
+            "fullUrl": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Condition/Lt2IFR5Ah76n4d8TFP5gBBI9rnFmRI4cri9d5bAKbiprU6ffpaePgZ.7RqjoqDCu",
+            "resource": {
+              "resourceType": "Condition",
+              "id": "Lt2IFR5Ah76n4d8TFP5gBBI9rnFmRI4cri9d5bAKbiprU6ffpaePgZ.7RqjoqDCu",
+              "meta": {
+                "lastUpdated": "2024-03-01T10:05:00.000-05:00",
+                "profile": [
+                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+                  "valueDateTime": "2024-03-01T09:35:00-05:00"
+                }
+              ],
+              "clinicalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                  }
+                ],
+                "text": "Active"
+              },
+              "verificationStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                    "code": "confirmed",
+                    "display": "Confirmed"
+                  }
+                ],
+                "text": "confirmed"
+              },
+              "category": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                      "code": "encounter-diagnosis",
+                      "display": "Encounter Diagnosis"
+                    }
+                  ],
+                  "text": "Encounter Diagnosis"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                    "code": "A42.1",
+                    "display": "Abdominal actinomycosis"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "43894001",
+                    "display": "Abdominal actinomycosis"
+                  }
+                ],
+                "text": "Abdominal actinomycosis"
+              },
+              "subject": {
+                "reference": "Patient/Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+                "type": "Patient"
+              },
+              "encounter": {
+                "reference": "Encounter/Lt2IFR5Ah76n4d8TFP5gBH7DrM18jACm93EMLBGKVCAWHYN2nzdr.w38nbw4WSre",
+                "type": "Encounter"
+              },
+              "recordedDate": "2024-03-01T09:35:00-05:00",
+              "recorder": {
+                "reference": "Practitioner/Lt2IFR5Ah76n4d8TFP5gBAfrwqxiesg83cejztPkOEI",
+                "type": "Practitioner"
+              }
+            },
+            "search": {
+              "mode": "match"
+            }
+          }
+        ]
+      },
+      "scope": "patient/Condition.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Condition?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Condition?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+      ]
+    },
+    {
+      "resource_type": "Coverage",
+      "status": "empty",
+      "count": 0,
+      "rows": [],
+      "columns": [],
+      "message": "No entries in bundle",
+      "raw": {
+        "resourceType": "Bundle",
+        "id": "3f0209b6-000d-40f5-97fa-665888d4cfab",
+        "meta": {
+          "lastUpdated": "2026-06-10T13:00:49.665-04:00"
+        },
+        "type": "searchset",
+        "total": 0,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Coverage?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+          }
+        ]
+      },
+      "scope": "patient/Coverage.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Coverage?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Coverage?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+      ]
+    },
+    {
+      "resource_type": "DiagnosticReport",
+      "status": "empty",
+      "count": 0,
+      "rows": [],
+      "columns": [],
+      "message": "No entries in bundle",
+      "raw": {
+        "resourceType": "Bundle",
+        "id": "0543f6b0-866a-42b5-9ebf-c63b115d0aec",
+        "meta": {
+          "lastUpdated": "2026-06-10T13:00:51.158-04:00"
+        },
+        "type": "searchset",
+        "total": 0,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/DiagnosticReport?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+          }
+        ]
+      },
+      "scope": "patient/DiagnosticReport.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/DiagnosticReport?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/DiagnosticReport?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+      ]
+    },
+    {
+      "resource_type": "DocumentReference",
+      "status": "ok",
+      "count": 3,
+      "rows": [
+        {
+          "id": "Lt2IFR5Ah76n4d8TFP5gBJ0r58YIjYJkZPYWikPHXsQ",
+          "type": "\u2014",
+          "status": "\u2014",
+          "date": "\u2014",
+          "description": "\u2014"
+        },
+        {
+          "id": "Lt2IFR5Ah76n4d8TFP5gBJ0r58YIjYJkZPYWikPHXsQ",
+          "type": "CCD Document",
+          "status": "current",
+          "date": "2024-03-01T09:35:00.000-05:00",
+          "description": "\u2014"
+        },
+        {
+          "id": "Lt2IFR5Ah76n4d8TFP5gBNXw-p3xWs8RprA3Aah6IgM",
+          "type": "CCD Document",
+          "status": "current",
+          "date": "2024-03-01T09:35:00.000-05:00",
+          "description": "\u2014"
+        }
+      ],
+      "columns": [
+        "id",
+        "type",
+        "status",
+        "date",
+        "description"
+      ],
+      "message": null,
+      "raw": {
+        "resourceType": "Bundle",
+        "id": "73b27bf7-21e8-4319-b3be-c84fed935327",
+        "meta": {
+          "lastUpdated": "2026-06-10T13:00:53.580-04:00"
+        },
+        "type": "searchset",
+        "total": 2,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/DocumentReference?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+          }
+        ],
+        "entry": [
+          {
+            "fullUrl": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Binary/Lt2IFR5Ah76n4d8TFP5gBJ0r58YIjYJkZPYWikPHXsQ",
+            "resource": {
+              "resourceType": "Binary",
+              "id": "Lt2IFR5Ah76n4d8TFP5gBJ0r58YIjYJkZPYWikPHXsQ",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/R4/binary"
+                ]
+              },
+              "contentType": "application/xml",
+              "data": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxDbGluaWNhbERvY3VtZW50IHhtbG5zPSJ1cm46aGw3LW9yZzp2MyIgeG1sbnM6c2R0Yz0idXJuOmhsNy1vcmc6c2R0YyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSI+PHJlYWxtQ29kZSBjb2RlPSJVUyIvPjx0eXBlSWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuMS4zIiBleHRlbnNpb249IlBPQ0RfSEQwMDAwNDAiLz48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi4xLjEiLz48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi4xLjEiIGV4dGVuc2lvbj0iMjAxNS0wOC0wMSIvPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIyLjEuMSIgZXh0ZW5zaW9uPSIyMDIzLTA1LTAxIi8+PHRlbXBsYXRlSWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuMTAuMjAuMjIuMS4yIi8+PHRlbXBsYXRlSWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuMTAuMjAuMjIuMS4yIiBleHRlbnNpb249IjIwMTUtMDgtMDEiLz48aWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuNC4zOTEiIGV4dGVuc2lvbj0iOGQyYWEyZGUtZWI5Zi00ODQwLWFkYmEtZWVmMDM1ODQwOWQwIiBhc3NpZ25pbmdBdXRob3JpdHlOYW1lPSJlQ2xpbmljYWxXb3JrcyIvPjxjb2RlIGNvZGU9IjM0MTMzLTkiIGNvZGVTeXN0ZW09IjIuMTYuODQwLjEuMTEzODgzLjYuMSIgY29kZVN5c3RlbU5hbWU9IkxPSU5DIiBkaXNwbGF5TmFtZT0iU1VNTUFSSVpBVElPTiBPRiBFUElTT0RFIE5PVEUiLz48dGl0bGU+UGF0aWVudCBIZWFsdGggUmVjb3JkPC90aXRsZT48ZWZmZWN0aXZlVGltZSB2YWx1ZT0iMjAyNjA2MTAxMzAwNTItMDQwMCIvPjxjb25maWRlbnRpYWxpdHlDb2RlIGNvZGU9Ik4iIGNvZGVTeXN0ZW09IjIuMTYuODQwLjEuMTEzODgzLjUuMjUiIGNvZGVTeXN0ZW1OYW1lPSJDb25maWRlbnRpYWxpdHkiIGRpc3BsYXlOYW1lPSJub3JtYWwiLz48bGFuZ3VhZ2VDb2RlIGNvZGU9ImVuLVVTIi8+PHNldElkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjQuMzkxIiBleHRlbnNpb249IjhkMmFhMmRlLWViOWYtNDg0MC1hZGJhLWVlZjAzNTg0MDlkMCIgYXNzaWduaW5nQXV0aG9yaXR5TmFtZT0iZUNsaW5pY2FsV29ya3MiLz48dmVyc2lvbk51bWJlciB2YWx1ZT0iMzEwIi8+PHJlY29yZFRhcmdldD48cGF0aWVudFJvbGUgY2xhc3NDb2RlPSJQQVQiPjxpZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My40LjM5MS4zMjkxNTUiIGV4dGVuc2lvbj0iTHQySUZSNUFoNzZuNGQ4VEZQNWdCRGFody43ckM3WFhGVlVxZWxvOUxzdyIgYXNzaWduaW5nQXV0aG9yaXR5TmFtZT0iVGVzdCBGYWNpbGl0eSIvPjxpZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My40LjM5MS4zMjkxNTUuMSIgZXh0ZW5zaW9uPSI5MTY3IiBhc3NpZ25pbmdBdXRob3JpdHlOYW1lPSJUZXN0IEZhY2lsaXR5IEFDQyBOTyIvPjxhZGRyIHVzZT0iUFNUIj48c3RyZWV0QWRkcmVzc0xpbmUgbnVsbEZsYXZvcj0iTkkiLz48Y2l0eT5EYWxsYXM8L2NpdHk+PHN0YXRlPkFBPC9zdGF0ZT48cG9zdGFsQ29kZT4xMjM0NTwvcG9zdGFsQ29kZT48Y291bnRyeT5VUzwvY291bnRyeT48L2FkZHI+PGFkZHIgdXNlPSJQU1QiPjxzdHJlZXRBZGRyZXNzTGluZSBudWxsRmxhdm9yPSJOSSIvPjxjaXR5IG51bGxGbGF2b3I9Ik5JIi8+PHN0YXRlIG51bGxGbGF2b3I9Ik5JIi8+PHBvc3RhbENvZGUgbnVsbEZsYXZvcj0iTkkiLz48Y291bnRyeT5VUzwvY291bnRyeT48dXNlYWJsZVBlcmlvZCB4c2k6dHlwZT0iSVZMX1RTIj48bG93IG51bGxGbGF2b3I9Ik5JIi8+PGhpZ2ggbnVsbEZsYXZvcj0iTkkiLz48L3VzZWFibGVQZXJpb2Q+PC9hZGRyPjx0ZWxlY29tIG51bGxGbGF2b3I9Ik5JIi8+PHBhdGllbnQ+PG5hbWUgdXNlPSJMIj48Z2l2ZW4+UGF0aWVudFRocmVlPC9naXZlbj48ZmFtaWx5PkdIPC9mYW1pbHk+PC9uYW1lPjxhZG1pbmlzdHJhdGl2ZUdlbmRlckNvZGUgY29kZT0iTSIgY29kZVN5c3RlbT0iMi4xNi44NDAuMS4xMTM4ODMuNS4xIiBjb2RlU3lzdGVtTmFtZT0iQWRtaW5pc3RyYXRpdmVHZW5kZXIiIGRpc3BsYXlOYW1lPSJNYWxlIi8+PGJpcnRoVGltZSB2YWx1ZT0iMTk5MTAzMDYiLz48c2R0YzpkZWNlYXNlZEluZCB2YWx1ZT0iZmFsc2UiLz48bWFyaXRhbFN0YXR1c0NvZGUgbnVsbEZsYXZvcj0iTkkiLz48cmFjZUNvZGUgY29kZT0iMTAwMi01IiBjb2RlU3lzdGVtPSIyLjE2Ljg0MC4xLjExMzg4My42LjIzOCIgY29kZVN5c3RlbU5hbWU9IlJhY2UgJmFtcDsgRXRobmljaXR5IC0gQ0RDIiBkaXNwbGF5TmFtZT0iQW1lcmljYW4gSW5kaWFuIG9yIEFsYXNrYSBOYXRpdmUiLz48c2R0YzpyYWNlQ29kZSBjb2RlPSIxMDA2LTYiIGNvZGVTeXN0ZW09IjIuMTYuODQwLjEuMTEzODgzLjYuMjM4IiBjb2RlU3lzdGVtTmFtZT0iUmFjZSAmYW1wOyBFdGhuaWNpdHkgLSBDREMiIGRpc3BsYXlOYW1lPSJBYmVuYWtpIi8+PGV0aG5pY0dyb3VwQ29kZSBjb2RlPSIyMTM1LTIiIGNvZGVTeXN0ZW09IjIuMTYuODQwLjEuMTEzODgzLjYuMjM4IiBjb2RlU3lzdGVtTmFtZT0iUmFjZSAmYW1wOyBFdGhuaWNpdHkgLSBDREMiIGRpc3BsYXlOYW1lPSJIaXNwYW5pYyBvciBMYXRpbm8iLz48c2R0YzpldGhuaWNHcm91cENvZGUgY29kZT0iMjEzOC02IiBjb2RlU3lzdGVtPSIyLjE2Ljg0MC4xLjExMzg4My42LjIzOCIgY29kZVN5c3RlbU5hbWU9IlJhY2UgJmFtcDsgRXRobmljaXR5IC0gQ0RDIiBkaXNwbGF5TmFtZT0iQW5kYWx1c2lhbiIvPjxsYW5ndWFnZUNvbW11bmljYXRpb24+PGxhbmd1YWdlQ29kZSBjb2RlPSJhYiIvPjxwcmVmZXJlbmNlSW5kIHZhbHVlPSJ0cnVlIi8+PC9sYW5ndWFnZUNvbW11bmljYXRpb24+PC9wYXRpZW50PjwvcGF0aWVudFJvbGU+PC9yZWNvcmRUYXJnZXQ+PGF1dGhvcj48dGltZSB2YWx1ZT0iMjAyNjA2MTAiLz48YXNzaWduZWRBdXRob3I+PGlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjQuMzkxIiBleHRlbnNpb249IlYxMi4wLjMuMDQwMDk0MDUiLz48YWRkciBudWxsRmxhdm9yPSJOQSIvPjx0ZWxlY29tIG51bGxGbGF2b3I9Ik5BIi8+PGFzc2lnbmVkQXV0aG9yaW5nRGV2aWNlPjxtYW51ZmFjdHVyZXJNb2RlbE5hbWU+ZUNsaW5pY2FsV29ya3MgQ0NEQSBWMTIuMC4zLjA0MDA5NDA1PC9tYW51ZmFjdHVyZXJNb2RlbE5hbWU+PHNvZnR3YXJlTmFtZT5lQ2xpbmljYWxXb3Jrczwvc29mdHdhcmVOYW1lPjwvYXNzaWduZWRBdXRob3JpbmdEZXZpY2U+PHJlcHJlc2VudGVkT3JnYW5pemF0aW9uPjxpZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My40LjM5MS4zMjkxNTUiLz48bmFtZT5UZXN0IEZhY2lsaXR5PC9uYW1lPjx0ZWxlY29tIHZhbHVlPSJ0ZWw6KzEoNTA4KS00NzUtMDYwMCIvPjxhZGRyPjxzdHJlZXRBZGRyZXNzTGluZT4yIHRlY2hub2xvZ3kgZHJpdmU8L3N0cmVldEFkZHJlc3NMaW5lPjxjaXR5Pndlc3Rib3JvPC9jaXR5PjxzdGF0ZT5NQTwvc3RhdGU+PHBvc3RhbENvZGU+MDE1ODEtODk4OTwvcG9zdGFsQ29kZT48Y291bnRyeT5VUzwvY291bnRyeT48L2FkZHI+PC9yZXByZXNlbnRlZE9yZ2FuaXphdGlvbj48L2Fzc2lnbmVkQXV0aG9yPjwvYXV0aG9yPjxjdXN0b2RpYW4+PGFzc2lnbmVkQ3VzdG9kaWFuPjxyZXByZXNlbnRlZEN1c3RvZGlhbk9yZ2FuaXphdGlvbj48aWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuNC4zOTEiIGV4dGVuc2lvbj0iMzI5MTU1Ii8+PG5hbWU+VGVzdCBGYWNpbGl0eTwvbmFtZT48dGVsZWNvbSB2YWx1ZT0idGVsOisxKDUwOCktNDc1LTA2MDAiLz48YWRkcj48c3RyZWV0QWRkcmVzc0xpbmU+MiB0ZWNobm9sb2d5IGRyaXZlPC9zdHJlZXRBZGRyZXNzTGluZT48Y2l0eT53ZXN0Ym9ybzwvY2l0eT48c3RhdGU+TUE8L3N0YXRlPjxwb3N0YWxDb2RlPjAxNTgxLTg5ODk8L3Bvc3RhbENvZGU+PGNvdW50cnk+VVM8L2NvdW50cnk+PC9hZGRyPjwvcmVwcmVzZW50ZWRDdXN0b2RpYW5Pcmdhbml6YXRpb24+PC9hc3NpZ25lZEN1c3RvZGlhbj48L2N1c3RvZGlhbj48cGFydGljaXBhbnQgdHlwZUNvZGU9IklORCI+PHRlbXBsYXRlSWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuMTAuMjAuMjIuNS44IiBleHRlbnNpb249IjIwMjMtMDUtMDEiLz48YXNzb2NpYXRlZEVudGl0eSBjbGFzc0NvZGU9IlBSUyI+PGlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjQuMzkxLjMyOTE1NSIgZXh0ZW5zaW9uPSJhNTJmNjE0NS0zMTU4LTNiZWQtOGQ3Mi0xNzA5MDY5MWY0OWEiLz48Y29kZSBjb2RlPSJPTkVTRUxGIiBjb2RlU3lzdGVtPSIyLjE2Ljg0MC4xLjExMzg4My41LjExMSIgY29kZVN5c3RlbU5hbWU9IlBlcnNvbmFsIEFuZCBMZWdhbCBSZWxhdGlvbnNoaXAgUm9sZSBUeXBlIiBkaXNwbGF5TmFtZT0iU2VsZiAtIHBhdGllbnQgaXMgdGhlIGluc3VyZWQiLz48YWRkciB1c2U9IlBTVCI+PHN0cmVldEFkZHJlc3NMaW5lIG51bGxGbGF2b3I9Ik5JIi8+PGNpdHk+RGFsbGFzPC9jaXR5PjxzdGF0ZT5BQTwvc3RhdGU+PHBvc3RhbENvZGU+MTIzNDU8L3Bvc3RhbENvZGU+PGNvdW50cnk+VVM8L2NvdW50cnk+PC9hZGRyPjx0ZWxlY29tIG51bGxGbGF2b3I9Ik5JIi8+PGFzc29jaWF0ZWRQZXJzb24+PG5hbWU+PGdpdmVuPlBhdGllbnRUaHJlZTwvZ2l2ZW4+PGZhbWlseT5HSDwvZmFtaWx5PjwvbmFtZT48L2Fzc29jaWF0ZWRQZXJzb24+PC9hc3NvY2lhdGVkRW50aXR5PjwvcGFydGljaXBhbnQ+PGRvY3VtZW50YXRpb25PZj48c2VydmljZUV2ZW50IGNsYXNzQ29kZT0iUENQUiI+PGVmZmVjdGl2ZVRpbWU+PGxvdyB2YWx1ZT0iMTk5MTAzMDYiLz48aGlnaCB2YWx1ZT0iMjAyNjA2MTAiLz48L2VmZmVjdGl2ZVRpbWU+PHBlcmZvcm1lciB0eXBlQ29kZT0iUFJGIj48ZnVuY3Rpb25Db2RlIG51bGxGbGF2b3I9IlVOSyI+PG9yaWdpbmFsVGV4dD5BcHBvaW50bWVudCBwcm92aWRlcjwvb3JpZ2luYWxUZXh0PjwvZnVuY3Rpb25Db2RlPjxhc3NpZ25lZEVudGl0eT48aWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuNC42IiBleHRlbnNpb249IjExMjc5MDQzNzciIGFzc2lnbmluZ0F1dGhvcml0eU5hbWU9Ik5hdGlvbmFsIFByb3ZpZGVyIElEIi8+PGFkZHI+PHN0cmVldEFkZHJlc3NMaW5lPjIgdGVjaG5vbG9neSBkcml2ZTwvc3RyZWV0QWRkcmVzc0xpbmU+PGNpdHk+d2VzdGJvcm88L2NpdHk+PHN0YXRlPk1BPC9zdGF0ZT48cG9zdGFsQ29kZT4wMTU4MS04OTg5PC9wb3N0YWxDb2RlPjxjb3VudHJ5PlVTPC9jb3VudHJ5PjwvYWRkcj48dGVsZWNvbSB2YWx1ZT0idGVsOisxKDUwOCktNDc1LTA2MDAiLz48dGVsZWNvbSB2YWx1ZT0ibWFpbHRvOmRmZmdnZ3YiLz48YXNzaWduZWRQZXJzb24+PG5hbWU+PGZhbWlseT5XaWxsaXM8L2ZhbWlseT48Z2l2ZW4+U2FtIE11bHRpPC9naXZlbj48L25hbWU+PC9hc3NpZ25lZFBlcnNvbj48L2Fzc2lnbmVkRW50aXR5PjwvcGVyZm9ybWVyPjwvc2VydmljZUV2ZW50PjwvZG9jdW1lbnRhdGlvbk9mPjxjb21wb25lbnQ+PHN0cnVjdHVyZWRCb2R5Pjxjb21wb25lbnQ+PHNlY3Rpb24gbnVsbEZsYXZvcj0iTkkiPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIyLjIuNiIvPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIyLjIuNi4xIi8+PHRlbXBsYXRlSWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuMTAuMjAuMjIuMi42IiBleHRlbnNpb249IjIwMTUtMDgtMDEiLz48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi4yLjYuMSIgZXh0ZW5zaW9uPSIyMDE1LTA4LTAxIi8+PGNvZGUgY29kZT0iNDg3NjUtMiIgY29kZVN5c3RlbT0iMi4xNi44NDAuMS4xMTM4ODMuNi4xIiBjb2RlU3lzdGVtTmFtZT0iTE9JTkMiIGRpc3BsYXlOYW1lPSJBbGxlcmdpZXMsIGFkdmVyc2UgcmVhY3Rpb25zLCBhbGVydHMiLz48dGl0bGU+QWxsZXJnaWVzPC90aXRsZT48dGV4dD5ObyBJbmZvcm1hdGlvbjwvdGV4dD48L3NlY3Rpb24+PC9jb21wb25lbnQ+PGNvbXBvbmVudD48c2VjdGlvbiBudWxsRmxhdm9yPSJOSSI+PHRlbXBsYXRlSWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuMTAuMjAuMjIuMi4zLjEiLz48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi4yLjMuMSIgZXh0ZW5zaW9uPSIyMDE1LTA4LTAxIi8+PGNvZGUgY29kZT0iMzA5NTQtMiIgY29kZVN5c3RlbT0iMi4xNi44NDAuMS4xMTM4ODMuNi4xIiBjb2RlU3lzdGVtTmFtZT0iTE9JTkMiIGRpc3BsYXlOYW1lPSJSZXN1bHRzIi8+PHRpdGxlPlJlc3VsdHM8L3RpdGxlPjx0ZXh0Pjxjb250ZW50IElEPSJOS05fcmVzdWx0cyI+Tm8gUmVzdWx0czwvY29udGVudD48L3RleHQ+PC9zZWN0aW9uPjwvY29tcG9uZW50Pjxjb21wb25lbnQ+PHNlY3Rpb24+PHRlbXBsYXRlSWQgcm9vdD0iMS4zLjYuMS40LjEuMTkzNzYuMS41LjMuMS4zLjEiLz48dGVtcGxhdGVJZCByb290PSIxLjMuNi4xLjQuMS4xOTM3Ni4xLjUuMy4xLjMuMSIgZXh0ZW5zaW9uPSIyMDE0LTA2LTA5Ii8+PGNvZGUgY29kZT0iNDIzNDktMSIgY29kZVN5c3RlbT0iMi4xNi44NDAuMS4xMTM4ODMuNi4xIiBjb2RlU3lzdGVtTmFtZT0iTE9JTkMiIGRpc3BsYXlOYW1lPSJSRUFTT04gRk9SIFJFRkVSUkFMIi8+PHRpdGxlPlJlYXNvbiBGb3IgUmVmZXJyYWw8L3RpdGxlPjx0ZXh0Pk5vIEluZm9ybWF0aW9uPC90ZXh0Pjwvc2VjdGlvbj48L2NvbXBvbmVudD48Y29tcG9uZW50PjxzZWN0aW9uPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIyLjIuMS4xIiBleHRlbnNpb249IjIwMTQtMDYtMDkiLz48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi4yLjEuMSIvPjxjb2RlIGNvZGU9IjEwMTYwLTAiIGNvZGVTeXN0ZW09IjIuMTYuODQwLjEuMTEzODgzLjYuMSIgY29kZVN5c3RlbU5hbWU9IkxPSU5DIiBkaXNwbGF5TmFtZT0iSGlzdG9yeSBvZiBtZWRpY2F0aW9uIHVzZSIvPjx0aXRsZT5NZWRpY2F0aW9uczwvdGl0bGU+PHRleHQ+PHRhYmxlIHdpZHRoPSIxMDAlIiBib3JkZXI9IjEiPjx0aGVhZD48dHI+PHRoPk1lZGljYXRpb248L3RoPjx0aD5TSUcgKFRha2UsIFJvdXRlLCBGcmVxdWVuY3ksIER1cmF0aW9uKTwvdGg+PHRoPk5vdGVzPC90aD48dGg+U3RhcnQgRGF0ZTwvdGg+PHRoPkVuZCBEYXRlPC90aD48dGg+RGlhZ25vc2lzIChJQ0QgQ29kZSk8L3RoPjx0aD5TdGF0dXM8L3RoPjwvdHI+PC90aGVhZD48dGJvZHk+PHRyPjx0ZCBJRD0ibWVkaWNhdGlvbjEiPlVzdGVraW51bWFiIDQ1IE1HLzAuNU1MIFNvbHV0aW9uIFByZWZpbGxlZCBTeXJpbmdlPC90ZD48dGQgSUQ9Imluc3RydWN0aW9uMSI+YXMgZGlyZWN0ZWQgU3ViY3V0YW5lb3VzPC90ZD48dGQvPjx0ZD4wMy8wMS8yMDI0PC90ZD48dGQvPjx0ZCBJRD0ibWVkaWNhdGlvbjFpbmRpY2F0aW9uIj5BYmRvbWluYWwgYWN0aW5vbXljb3NpcyAoSUNEXzEwIC0gQTQyLjEpPC90ZD48dGQ+QWN0aXZlPC90ZD48L3RyPjwvdGJvZHk+PC90YWJsZT48L3RleHQ+PGVudHJ5IHR5cGVDb2RlPSJEUklWIj48c3Vic3RhbmNlQWRtaW5pc3RyYXRpb24gY2xhc3NDb2RlPSJTQkFETSIgbW9vZENvZGU9IklOVCI+PHRlbXBsYXRlSWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuMTAuMjAuMjIuNC4xNiIgZXh0ZW5zaW9uPSIyMDE0LTA2LTA5Ii8+PHRlbXBsYXRlSWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuMTAuMjAuMjIuNC4xNiIvPjxpZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My40LjM5MS4zMjkxNTUiIGV4dGVuc2lvbj0iMWI1Y2ZhNTYtMDRlNC0zNzgzLWFjYmEtZWM4ZDY5ZTE2ZGMxIi8+PHRleHQ+PHJlZmVyZW5jZSB2YWx1ZT0iI21lZGljYXRpb24xIi8+PC90ZXh0PjxzdGF0dXNDb2RlIGNvZGU9ImFjdGl2ZSIvPjxlZmZlY3RpdmVUaW1lIHhzaTp0eXBlPSJJVkxfVFMiPjxsb3cgdmFsdWU9IjIwMjQwMzAxIi8+PGhpZ2ggbnVsbEZsYXZvcj0iTkkiLz48L2VmZmVjdGl2ZVRpbWU+PGVmZmVjdGl2ZVRpbWUgeHNpOnR5cGU9IlBJVkxfVFMiIGluc3RpdHV0aW9uU3BlY2lmaWVkPSJ0cnVlIiBvcGVyYXRvcj0iQSI+PHBlcmlvZCBudWxsRmxhdm9yPSJVTksiLz48L2VmZmVjdGl2ZVRpbWU+PGRvc2VRdWFudGl0eSBudWxsRmxhdm9yPSJVTksiLz48Y29uc3VtYWJsZT48bWFudWZhY3R1cmVkUHJvZHVjdCBjbGFzc0NvZGU9Ik1BTlUiPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIyLjQuMjMiIGV4dGVuc2lvbj0iMjAxNC0wNi0wOSIvPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIyLjQuMjMiLz48bWFudWZhY3R1cmVkTWF0ZXJpYWw+PGNvZGUgY29kZT0iODUzMzUwIiBjb2RlU3lzdGVtPSIyLjE2Ljg0MC4xLjExMzg4My42Ljg4IiBjb2RlU3lzdGVtTmFtZT0iUnhOb3JtIiBkaXNwbGF5TmFtZT0idXN0ZWtpbnVtYWIgNDUgbWcvMC41bWwgc3ViY3V0YW5lb3VzIHNvbHV0aW9uIHByZWZpbGxlZCBzeXJpbmdlIj48b3JpZ2luYWxUZXh0PjxyZWZlcmVuY2UgdmFsdWU9IiNtZWRpY2F0aW9uMSIvPlVzdGVraW51bWFiIDQ1IE1HLzAuNU1MIFNvbHV0aW9uIFByZWZpbGxlZCBTeXJpbmdlPC9vcmlnaW5hbFRleHQ+PHRyYW5zbGF0aW9uIGNvZGU9IjU3ODk0LTA0NDAtMDEiIGNvZGVTeXN0ZW09IjIuMTYuODQwLjEuMTEzODgzLjYuNjkiIGNvZGVTeXN0ZW1OYW1lPSJOREMiIGRpc3BsYXlOYW1lPSJVc3Rla2ludW1hYiA0NSBNRy8wLjVNTCBTb2x1dGlvbiBQcmVmaWxsZWQgU3lyaW5nZSIvPjwvY29kZT48L21hbnVmYWN0dXJlZE1hdGVyaWFsPjxtYW51ZmFjdHVyZXJPcmdhbml6YXRpb24+PG5hbWU+SkFOU1NFTiBCSU9URUNIPC9uYW1lPjwvbWFudWZhY3R1cmVyT3JnYW5pemF0aW9uPjwvbWFudWZhY3R1cmVkUHJvZHVjdD48L2NvbnN1bWFibGU+PGF1dGhvcj48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi41LjYiIGV4dGVuc2lvbj0iMjAxOS0xMC0wMSIvPjx0aW1lIHZhbHVlPSIyMDI0MDMwMTEwMDUwMC0wNTAwIi8+PGFzc2lnbmVkQXV0aG9yPjxpZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My40LjYiIGV4dGVuc2lvbj0iMTEyNzkwNDM3NyIgYXNzaWduaW5nQXV0aG9yaXR5TmFtZT0iTmF0aW9uYWwgUHJvdmlkZXIgSUQiLz48aWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuNC4zOTEuMzI5MTU1IiBleHRlbnNpb249IjNlMjJjYTg4LWQ0MzQtMzYwZC04MGJjLTM2YjkzY2VhMTEzMiIvPjxjb2RlIG51bGxGbGF2b3I9Ik5JIi8+PGFzc2lnbmVkUGVyc29uPjxuYW1lPjxmYW1pbHk+V2lsbGlzPC9mYW1pbHk+PGdpdmVuPlNhbSBNdWx0aTwvZ2l2ZW4+PC9uYW1lPjwvYXNzaWduZWRQZXJzb24+PHJlcHJlc2VudGVkT3JnYW5pemF0aW9uPjxpZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My41LjEwMDgiIG51bGxGbGF2b3I9IlVOSyIvPjxuYW1lPlRlc3QgRmFjaWxpdHk8L25hbWU+PC9yZXByZXNlbnRlZE9yZ2FuaXphdGlvbj48L2Fzc2lnbmVkQXV0aG9yPjwvYXV0aG9yPjxlbnRyeVJlbGF0aW9uc2hpcCB0eXBlQ29kZT0iQ09NUCI+PHN1YnN0YW5jZUFkbWluaXN0cmF0aW9uIGNsYXNzQ29kZT0iU0JBRE0iIG1vb2RDb2RlPSJFVk4iPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIyLjQuMTQ3Ii8+PGNvZGUgY29kZT0iNzY2NjItNiIgY29kZVN5c3RlbT0iMi4xNi44NDAuMS4xMTM4ODMuNi4xIiBjb2RlU3lzdGVtTmFtZT0iTE9JTkMiIGRpc3BsYXlOYW1lPSJNZWRpY2F0aW9uIEluc3RydWN0aW9ucyIvPjx0ZXh0PjxyZWZlcmVuY2UgdmFsdWU9IiNpbnN0cnVjdGlvbjEiLz48L3RleHQ+PGNvbnN1bWFibGU+PG1hbnVmYWN0dXJlZFByb2R1Y3Q+PG1hbnVmYWN0dXJlZExhYmVsZWREcnVnIG51bGxGbGF2b3I9Ik5BIi8+PC9tYW51ZmFjdHVyZWRQcm9kdWN0PjwvY29uc3VtYWJsZT48L3N1YnN0YW5jZUFkbWluaXN0cmF0aW9uPjwvZW50cnlSZWxhdGlvbnNoaXA+PGVudHJ5UmVsYXRpb25zaGlwIHR5cGVDb2RlPSJSU09OIj48ZW5jb3VudGVyIGNsYXNzQ29kZT0iRU5DIiBtb29kQ29kZT0iRVZOIj48aWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuNC4zOTEuMzI5MTU1IiBleHRlbnNpb249IjU4YTllMGUyLTgwNDAtM2MyMS1hOTUxLTRlOTRhNjBmY2RmYiIvPjwvZW5jb3VudGVyPjwvZW50cnlSZWxhdGlvbnNoaXA+PGVudHJ5UmVsYXRpb25zaGlwIHR5cGVDb2RlPSJTVUJKIiBpbnZlcnNpb25JbmQ9InRydWUiPjxvYnNlcnZhdGlvbiBjbGFzc0NvZGU9Ik9CUyIgbW9vZENvZGU9IkVWTiI+PHRlbXBsYXRlSWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuMTAuMjAuMjIuNC4xOSIvPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIyLjQuMTkiIGV4dGVuc2lvbj0iMjAxNC0wNi0wOSIvPjxpZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My40LjM5MS4zMjkxNTUiIGV4dGVuc2lvbj0iMTlhODFiYTYtNDAwMC0zOWFmLWIxNzEtZjgxMmQxYmExMTUyIi8+PGNvZGUgY29kZT0iMjgyMjkxMDA5IiBjb2RlU3lzdGVtPSIyLjE2Ljg0MC4xLjExMzg4My42Ljk2IiBjb2RlU3lzdGVtTmFtZT0iU05PTUVEIENUIiBkaXNwbGF5TmFtZT0iRGlhZ25vc2lzIj48dHJhbnNsYXRpb24gY29kZT0iMjkzMDgtNCIgY29kZVN5c3RlbT0iMi4xNi44NDAuMS4xMTM4ODMuNi4xIiBjb2RlU3lzdGVtTmFtZT0iTE9JTkMiIGRpc3BsYXlOYW1lPSJEaWFnbm9zaXMiLz48L2NvZGU+PHRleHQ+PHJlZmVyZW5jZSB2YWx1ZT0iI21lZGljYXRpb24xaW5kaWNhdGlvbiIvPjwvdGV4dD48c3RhdHVzQ29kZSBjb2RlPSJjb21wbGV0ZWQiLz48dmFsdWUgeHNpOnR5cGU9IkNEIiBudWxsRmxhdm9yPSJPVEgiPjx0cmFuc2xhdGlvbiBjb2RlPSJBNDIuMSIgY29kZVN5c3RlbT0iMi4xNi44NDAuMS4xMTM4ODMuNi45MCIgY29kZVN5c3RlbU5hbWU9IklDRDEwLUNNIiBkaXNwbGF5TmFtZT0iQWJkb21pbmFsIGFjdGlub215Y29zaXMiLz48L3ZhbHVlPjwvb2JzZXJ2YXRpb24+PC9lbnRyeVJlbGF0aW9uc2hpcD48L3N1YnN0YW5jZUFkbWluaXN0cmF0aW9uPjwvZW50cnk+PC9zZWN0aW9uPjwvY29tcG9uZW50Pjxjb21wb25lbnQ+PHNlY3Rpb24gbnVsbEZsYXZvcj0iTkkiPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIyLjIuMi4xIi8+PHRlbXBsYXRlSWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuMTAuMjAuMjIuMi4yLjEiIGV4dGVuc2lvbj0iMjAxNS0wOC0wMSIvPjxjb2RlIGNvZGU9IjExMzY5LTYiIGNvZGVTeXN0ZW09IjIuMTYuODQwLjEuMTEzODgzLjYuMSIgY29kZVN5c3RlbU5hbWU9IkxPSU5DIiBkaXNwbGF5TmFtZT0iSGlzdG9yeSBvZiBpbW11bml6YXRpb25zIi8+PHRpdGxlPkltbXVuaXphdGlvbnM8L3RpdGxlPjx0ZXh0Pk5vIEluZm9ybWF0aW9uPC90ZXh0Pjwvc2VjdGlvbj48L2NvbXBvbmVudD48Y29tcG9uZW50PjxzZWN0aW9uPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIyLjIuMTciLz48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi4yLjE3IiBleHRlbnNpb249IjIwMTUtMDgtMDEiLz48Y29kZSBjb2RlPSIyOTc2Mi0yIiBjb2RlU3lzdGVtPSIyLjE2Ljg0MC4xLjExMzg4My42LjEiIGNvZGVTeXN0ZW1OYW1lPSJMT0lOQyIgZGlzcGxheU5hbWU9IlNPQ0lBTCBISVNUT1JZIi8+PHRpdGxlPlNvY2lhbCBIaXN0b3J5PC90aXRsZT48dGV4dD48Y29udGVudD5TZXggT2JzZXJ2YXRpb248L2NvbnRlbnQ+PHRhYmxlIHdpZHRoPSIxMDAlIiBib3JkZXI9IjEiPjx0aGVhZD48dHI+PHRoPlNvY2lhbCBIaXN0b3J5IE9ic2VydmF0aW9uPC90aD48dGg+RGVzY3JpcHRpb248L3RoPjwvdHI+PC90aGVhZD48dGJvZHk+PHRyPjx0ZCBJRD0ic2V4T2JzZXJ2YXRpb24iPlNleCBPYnNlcnZhdGlvbjwvdGQ+PHRkPk1hbGU8L3RkPjwvdHI+PC90Ym9keT48L3RhYmxlPjwvdGV4dD48ZW50cnk+PG9ic2VydmF0aW9uIGNsYXNzQ29kZT0iT0JTIiBtb29kQ29kZT0iRVZOIj48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi40LjUwNyIgZXh0ZW5zaW9uPSIyMDIzLTA2LTI4Ii8+PGNvZGUgY29kZT0iNDYwOTgtMCIgY29kZVN5c3RlbT0iMi4xNi44NDAuMS4xMTM4ODMuNi4xIiBjb2RlU3lzdGVtTmFtZT0iTE9JTkMiIGRpc3BsYXlOYW1lPSJTZXgiLz48dGV4dD48cmVmZXJlbmNlIHZhbHVlPSIjc2V4T2JzZXJ2YXRpb24iLz48L3RleHQ+PHN0YXR1c0NvZGUgY29kZT0iY29tcGxldGVkIi8+PGVmZmVjdGl2ZVRpbWUgdmFsdWU9IjIwMjQwMzE1Ii8+PHZhbHVlIHhzaTp0eXBlPSJDRCIgY29kZT0iMjQ4MTUzMDA3IiBjb2RlU3lzdGVtPSIyLjE2Ljg0MC4xLjExMzg4My42Ljk2IiBjb2RlU3lzdGVtTmFtZT0iU05PTUVEIENUIiBkaXNwbGF5TmFtZT0iTWFsZSIvPjwvb2JzZXJ2YXRpb24+PC9lbnRyeT48L3NlY3Rpb24+PC9jb21wb25lbnQ+PGNvbXBvbmVudD48c2VjdGlvbiBudWxsRmxhdm9yPSJOSSI+PHRlbXBsYXRlSWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuMTAuMjAuMjIuMi41LjEiLz48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi4yLjUuMSIgZXh0ZW5zaW9uPSIyMDE1LTA4LTAxIi8+PGNvZGUgY29kZT0iMTE0NTAtNCIgY29kZVN5c3RlbT0iMi4xNi44NDAuMS4xMTM4ODMuNi4xIiBjb2RlU3lzdGVtTmFtZT0iTE9JTkMiIGRpc3BsYXlOYW1lPSJQUk9CTEVNIExJU1QiLz48dGl0bGU+UHJvYmxlbXM8L3RpdGxlPjx0ZXh0Pk5vIEluZm9ybWF0aW9uPC90ZXh0Pjwvc2VjdGlvbj48L2NvbXBvbmVudD48Y29tcG9uZW50PjxzZWN0aW9uIG51bGxGbGF2b3I9Ik5JIj48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi4yLjQuMSIvPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIyLjIuNC4xIiBleHRlbnNpb249IjIwMTUtMDgtMDEiLz48Y29kZSBjb2RlPSI4NzE2LTMiIGNvZGVTeXN0ZW09IjIuMTYuODQwLjEuMTEzODgzLjYuMSIgY29kZVN5c3RlbU5hbWU9IkxPSU5DIiBkaXNwbGF5TmFtZT0iVklUQUwgU0lHTlMiLz48dGl0bGU+Vml0YWwgU2lnbnM8L3RpdGxlPjx0ZXh0Pk5vIEluZm9ybWF0aW9uPC90ZXh0Pjwvc2VjdGlvbj48L2NvbXBvbmVudD48Y29tcG9uZW50PjxzZWN0aW9uIG51bGxGbGF2b3I9Ik5JIj48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi4yLjcuMSIvPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIyLjIuNy4xIiBleHRlbnNpb249IjIwMTQtMDYtMDkiLz48Y29kZSBjb2RlPSI0NzUxOS00IiBjb2RlU3lzdGVtPSIyLjE2Ljg0MC4xLjExMzg4My42LjEiIGNvZGVTeXN0ZW1OYW1lPSJMT0lOQyIgZGlzcGxheU5hbWU9IlBST0NFRFVSRVMiLz48dGl0bGU+UHJvY2VkdXJlczwvdGl0bGU+PHRleHQ+PGNvbnRlbnQgSUQ9Ik5LTl9wcm9jZWR1cmUiPk5vIEluZm9ybWF0aW9uPC9jb250ZW50PjwvdGV4dD48L3NlY3Rpb24+PC9jb21wb25lbnQ+PGNvbXBvbmVudD48c2VjdGlvbj48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi4yLjIyLjEiLz48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi4yLjIyLjEiIGV4dGVuc2lvbj0iMjAxNS0wOC0wMSIvPjxjb2RlIGNvZGU9IjQ2MjQwLTgiIGNvZGVTeXN0ZW09IjIuMTYuODQwLjEuMTEzODgzLjYuMSIgY29kZVN5c3RlbU5hbWU9IkxPSU5DIi8+PHRpdGxlPkVuY291bnRlcnM8L3RpdGxlPjx0ZXh0Pjx0YWJsZSB3aWR0aD0iMTAwJSIgYm9yZGVyPSIxIj48dGhlYWQ+PHRyPjx0aD5EYXRlPC90aD48dGg+VGltZTwvdGg+PHRoPlR5cGU8L3RoPjx0aD5GYWNpbGl0eTwvdGg+PHRoPkxvY2F0aW9uPC90aD48dGg+UHJvdmlkZXI8L3RoPjx0aD5EaWFnbm9zaXM8L3RoPjwvdHI+PC90aGVhZD48dGJvZHk+PHRyPjx0ZD4wMy8wMS8yMDI0PC90ZD48dGQ+MDk6MzUgQU08L3RkPjx0ZD5PZmZpY2UgVmlzaXQ8L3RkPjx0ZD5UZXN0IEZhY2lsaXR5PC90ZD48dGQ+MiB0ZWNobm9sb2d5IGRyaXZlIHdlc3Rib3JvLCBNQSAwMTU4MS04OTg5PC90ZD48dGQ+U2FtIE11bHRpIFdpbGxpczwvdGQ+PHRkPkFiZG9taW5hbCBhY3Rpbm9teWNvc2lzIEE0Mi4xPC90ZD48L3RyPjwvdGJvZHk+PC90YWJsZT48L3RleHQ+PGVudHJ5IHR5cGVDb2RlPSJEUklWIj48ZW5jb3VudGVyIGNsYXNzQ29kZT0iRU5DIiBtb29kQ29kZT0iRVZOIj48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi40LjQ5Ii8+PHRlbXBsYXRlSWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuMTAuMjAuMjIuNC40OSIgZXh0ZW5zaW9uPSIyMDE1LTA4LTAxIi8+PGlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjQuMzkxLjMyOTE1NSIgZXh0ZW5zaW9uPSI1OGE5ZTBlMi04MDQwLTNjMjEtYTk1MS00ZTk0YTYwZmNkZmIiLz48Y29kZSBudWxsRmxhdm9yPSJOSSI+PHRyYW5zbGF0aW9uIGNvZGU9IjExMCIgY29kZVN5c3RlbT0iMi4xNi44NDAuMS4xMTM4ODMuNC4zOTEuMzI5MTU1IiBjb2RlU3lzdGVtTmFtZT0iZUNXIHZpc2l0IGNvZGVzIiBkaXNwbGF5TmFtZT0iKE5QKSBOZXcgUGF0aWVudCIvPjwvY29kZT48ZWZmZWN0aXZlVGltZT48bG93IHZhbHVlPSIyMDI0MDMwMTA5MzUwMC0wNDAwIi8+PGhpZ2ggdmFsdWU9IjIwMjQwMzAxMTAwNTAwLTA0MDAiLz48L2VmZmVjdGl2ZVRpbWU+PHBlcmZvcm1lcj48YXNzaWduZWRFbnRpdHk+PGlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjQuNiIgZXh0ZW5zaW9uPSIxMTI3OTA0Mzc3IiBhc3NpZ25pbmdBdXRob3JpdHlOYW1lPSJOYXRpb25hbCBQcm92aWRlciBJRCIvPjxhc3NpZ25lZFBlcnNvbj48bmFtZT48Z2l2ZW4+U2FtIE11bHRpPC9naXZlbj48ZmFtaWx5PldpbGxpczwvZmFtaWx5PjwvbmFtZT48L2Fzc2lnbmVkUGVyc29uPjwvYXNzaWduZWRFbnRpdHk+PC9wZXJmb3JtZXI+PHBhcnRpY2lwYW50IHR5cGVDb2RlPSJMT0MiPjxwYXJ0aWNpcGFudFJvbGUgY2xhc3NDb2RlPSJTRExPQyI+PHRlbXBsYXRlSWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuMTAuMjAuMjIuNC4zMiIvPjxjb2RlIG51bGxGbGF2b3I9Ik5JIi8+PGFkZHI+PHN0cmVldEFkZHJlc3NMaW5lPjIgdGVjaG5vbG9neSBkcml2ZTwvc3RyZWV0QWRkcmVzc0xpbmU+PGNpdHk+d2VzdGJvcm88L2NpdHk+PHN0YXRlPk1BPC9zdGF0ZT48cG9zdGFsQ29kZT4wMTU4MS04OTg5PC9wb3N0YWxDb2RlPjxjb3VudHJ5PlVTPC9jb3VudHJ5PjwvYWRkcj48dGVsZWNvbSB2YWx1ZT0idGVsOisxKDUwOCktNDc1LTA2MDAiLz48dGVsZWNvbSB2YWx1ZT0ibWFpbHRvOmRmZmdnZ3YiLz48cGxheWluZ0VudGl0eSBjbGFzc0NvZGU9IlBMQyI+PG5hbWU+VGVzdCBGYWNpbGl0eTwvbmFtZT48L3BsYXlpbmdFbnRpdHk+PC9wYXJ0aWNpcGFudFJvbGU+PC9wYXJ0aWNpcGFudD48ZW50cnlSZWxhdGlvbnNoaXAgdHlwZUNvZGU9IkNPTVAiPjxhY3QgY2xhc3NDb2RlPSJBQ1QiIG1vb2RDb2RlPSJFVk4iPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIyLjQuODAiLz48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi40LjgwIiBleHRlbnNpb249IjIwMTUtMDgtMDEiLz48Y29kZSBjb2RlPSIyOTMwOC00IiBjb2RlU3lzdGVtPSIyLjE2Ljg0MC4xLjExMzg4My42LjEiIGNvZGVTeXN0ZW1OYW1lPSJMT0lOQyIgZGlzcGxheU5hbWU9IkRpYWdub3NpcyIvPjxlbnRyeVJlbGF0aW9uc2hpcCB0eXBlQ29kZT0iU1VCSiI+PG9ic2VydmF0aW9uIGNsYXNzQ29kZT0iT0JTIiBtb29kQ29kZT0iRVZOIj48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi40LjQiLz48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi40LjQiIGV4dGVuc2lvbj0iMjAxNS0wOC0wMSIvPjxpZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My40LjM5MS4zMjkxNTUiIGV4dGVuc2lvbj0iMTkxYTE4ODktM2Y1NC0zZjU5LWI1MWItNmFkMzE5Y2JkNWE5Ii8+PGNvZGUgY29kZT0iMjgyMjkxMDA5IiBjb2RlU3lzdGVtPSIyLjE2Ljg0MC4xLjExMzg4My42Ljk2IiBjb2RlU3lzdGVtTmFtZT0iU05PTUVEIENUIiBkaXNwbGF5TmFtZT0iRGlhZ25vc2lzIj48dHJhbnNsYXRpb24gY29kZT0iMjkzMDgtNCIgY29kZVN5c3RlbT0iMi4xNi44NDAuMS4xMTM4ODMuNi4xIiBjb2RlU3lzdGVtTmFtZT0iTE9JTkMiIGRpc3BsYXlOYW1lPSJEaWFnbm9zaXMiLz48L2NvZGU+PHN0YXR1c0NvZGUgY29kZT0iY29tcGxldGVkIi8+PGVmZmVjdGl2ZVRpbWU+PGxvdyBudWxsRmxhdm9yPSJOSSIvPjwvZWZmZWN0aXZlVGltZT48dmFsdWUgeHNpOnR5cGU9IkNEIiBudWxsRmxhdm9yPSJPVEgiPjx0cmFuc2xhdGlvbiBjb2RlPSJBNDIuMSIgY29kZVN5c3RlbT0iMi4xNi44NDAuMS4xMTM4ODMuNi45MCIgY29kZVN5c3RlbU5hbWU9IklDRDEwLUNNIiBkaXNwbGF5TmFtZT0iQWJkb21pbmFsIGFjdGlub215Y29zaXMgQTQyLjEiLz48L3ZhbHVlPjwvb2JzZXJ2YXRpb24+PC9lbnRyeVJlbGF0aW9uc2hpcD48L2FjdD48L2VudHJ5UmVsYXRpb25zaGlwPjwvZW5jb3VudGVyPjwvZW50cnk+PC9zZWN0aW9uPjwvY29tcG9uZW50Pjxjb21wb25lbnQ+PHNlY3Rpb24gbnVsbEZsYXZvcj0iTkkiPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIyLjIuMjMiIGV4dGVuc2lvbj0iMjAxNC0wNi0wOSIvPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIyLjIuMjMiLz48Y29kZSBjb2RlPSI0NjI2NC04IiBjb2RlU3lzdGVtPSIyLjE2Ljg0MC4xLjExMzg4My42LjEiIGNvZGVTeXN0ZW1OYW1lPSJMT0lOQyIgZGlzcGxheU5hbWU9Ik1lZGljYWwgRXF1aXBtZW50Ii8+PHRpdGxlPk1lZGljYWwgRXF1aXBtZW50PC90aXRsZT48dGV4dD5ObyBJbmZvcm1hdGlvbjwvdGV4dD48L3NlY3Rpb24+PC9jb21wb25lbnQ+PGNvbXBvbmVudD48c2VjdGlvbj48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi4yLjgiLz48Y29kZSBjb2RlPSI1MTg0OC0wIiBjb2RlU3lzdGVtPSIyLjE2Ljg0MC4xLjExMzg4My42LjEiIGNvZGVTeXN0ZW1OYW1lPSJMT0lOQyIgZGlzcGxheU5hbWU9IkFzc2Vzc21lbnRzIi8+PHRpdGxlPkFzc2Vzc21lbnRzPC90aXRsZT48dGV4dD48dGFibGUgd2lkdGg9IjEwMCUiIGJvcmRlcj0iMSI+PHRoZWFkPjx0cj48dGg+RW5jb3VudGVyIERhdGU8L3RoPjx0aD5EaWFnbm9zaXMgKElDRCBDb2RlKTwvdGg+PHRoPkFzc2Vzc21lbnQgTm90ZXM8L3RoPjx0aD5UcmVhdG1lbnQgTm90ZXM8L3RoPjx0aD5TZWN0aW9uIE5vdGVzPC90aD48L3RyPjwvdGhlYWQ+PHRib2R5Pjx0cj48dGQgSUQ9InJlZjEiPjAzLzAxLzIwMjQ8L3RkPjx0ZD5BYmRvbWluYWwgYWN0aW5vbXljb3NpcyAoSUNELTEwIC0gQTQyLjEpPC90ZD48dGQvPjx0ZC8+PHRkLz48L3RyPjwvdGJvZHk+PC90YWJsZT48L3RleHQ+PC9zZWN0aW9uPjwvY29tcG9uZW50Pjxjb21wb25lbnQ+PHNlY3Rpb24+PHRlbXBsYXRlSWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuMTAuMjAuMjIuMi4xMCIvPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIyLjIuMTAiIGV4dGVuc2lvbj0iMjAxNC0wNi0wOSIvPjxjb2RlIGNvZGU9IjE4Nzc2LTUiIGNvZGVTeXN0ZW09IjIuMTYuODQwLjEuMTEzODgzLjYuMSIgY29kZVN5c3RlbU5hbWU9IkxPSU5DIiBkaXNwbGF5TmFtZT0iUGxhbiBvZiBUcmVhdG1lbnQiLz48dGl0bGU+UGxhbiBPZiBUcmVhdG1lbnQ8L3RpdGxlPjx0ZXh0Pk5vIEluZm9ybWF0aW9uPC90ZXh0Pjwvc2VjdGlvbj48L2NvbXBvbmVudD48Y29tcG9uZW50PjxzZWN0aW9uIG51bGxGbGF2b3I9Ik5JIj48dGVtcGxhdGVJZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xMC4yMC4yMi4yLjYwIi8+PGNvZGUgY29kZT0iNjExNDYtNyIgY29kZVN5c3RlbT0iMi4xNi44NDAuMS4xMTM4ODMuNi4xIiBjb2RlU3lzdGVtTmFtZT0iTE9JTkMiIGRpc3BsYXlOYW1lPSJHb2FscyIvPjx0aXRsZT5Hb2FscyBTZWN0aW9uPC90aXRsZT48dGV4dD5ObyBJbmZvcm1hdGlvbjwvdGV4dD48L3NlY3Rpb24+PC9jb21wb25lbnQ+PGNvbXBvbmVudD48c2VjdGlvbiBudWxsRmxhdm9yPSJOSSI+PHRlbXBsYXRlSWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuMTAuMjAuMjIuMi41OCIgZXh0ZW5zaW9uPSIyMDE1LTA4LTAxIi8+PGNvZGUgY29kZT0iNzUzMTAtMyIgY29kZVN5c3RlbT0iMi4xNi44NDAuMS4xMTM4ODMuNi4xIiBjb2RlU3lzdGVtTmFtZT0iTE9JTkMiIGRpc3BsYXlOYW1lPSJIZWFsdGggQ29uY2VybnMgRG9jdW1lbnQiLz48dGl0bGU+SGVhbHRoIENvbmNlcm5zPC90aXRsZT48dGV4dD5ObyBJbmZvcm1hdGlvbjwvdGV4dD48L3NlY3Rpb24+PC9jb21wb25lbnQ+PGNvbXBvbmVudD48c2VjdGlvbiBudWxsRmxhdm9yPSJOSSI+PHRlbXBsYXRlSWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuMTAuMjAuMi4xMCIvPjx0ZW1wbGF0ZUlkIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjEwLjIwLjIuMTAiIGV4dGVuc2lvbj0iMjAxNS0wOC0wMSIvPjxjb2RlIGNvZGU9IjI5NTQ1LTEiIGNvZGVTeXN0ZW09IjIuMTYuODQwLjEuMTEzODgzLjYuMSIgY29kZVN5c3RlbU5hbWU9IkxPSU5DIiBkaXNwbGF5TmFtZT0iUGh5c2ljYWwgZmluZGluZ3MiLz48dGl0bGU+UGh5c2ljYWwgRmluZGluZ3M8L3RpdGxlPjx0ZXh0Pk5vIEluZm9ybWF0aW9uPC90ZXh0Pjwvc2VjdGlvbj48L2NvbXBvbmVudD48L3N0cnVjdHVyZWRCb2R5PjwvY29tcG9uZW50PjwvQ2xpbmljYWxEb2N1bWVudD4="
+            },
+            "search": {
+              "mode": "include"
+            }
+          },
+          {
+            "fullUrl": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/DocumentReference/Lt2IFR5Ah76n4d8TFP5gBJ0r58YIjYJkZPYWikPHXsQ",
+            "resource": {
+              "resourceType": "DocumentReference",
+              "id": "Lt2IFR5Ah76n4d8TFP5gBJ0r58YIjYJkZPYWikPHXsQ",
+              "meta": {
+                "lastUpdated": "2026-06-10T13:00:52.633-04:00",
+                "profile": [
+                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+                ]
+              },
+              "identifier": [
+                {
+                  "system": "urn:oid:2.16.840.1.113883.4.391",
+                  "value": "Lt2IFR5Ah76n4d8TFP5gBJ0r58YIjYJkZPYWikPHXsQ"
+                }
+              ],
+              "status": "current",
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "34133-9",
+                    "display": "Summary of episode note"
+                  }
+                ],
+                "text": "CCD Document"
+              },
+              "category": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                      "code": "clinical-note",
+                      "display": "Clinical Note"
+                    }
+                  ],
+                  "text": "Clinical Note"
+                }
+              ],
+              "subject": {
+                "reference": "Patient/Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+                "type": "Patient"
+              },
+              "date": "2024-03-01T09:35:00.000-05:00",
+              "author": [
+                {
+                  "reference": "Organization/Lt2IFR5Ah76n4d8TFP5gBPMFWGL8HhxnxooU.mnA.n5.Xl5yXZN1TQgZByeKFIIZ",
+                  "type": "Organization"
+                }
+              ],
+              "custodian": {
+                "reference": "Organization/Lt2IFR5Ah76n4d8TFP5gBPMFWGL8HhxnxooU.mnA.n5.Xl5yXZN1TQgZByeKFIIZ",
+                "type": "Organization"
+              },
+              "content": [
+                {
+                  "attachment": {
+                    "contentType": "application/xml",
+                    "url": "Binary/Lt2IFR5Ah76n4d8TFP5gBJ0r58YIjYJkZPYWikPHXsQ"
+                  },
+                  "format": {
+                    "system": "urn:oid:1.3.6.1.4.1.19376.1.2.3",
+                    "code": "urn:hl7-org:sdwg:ccda-structuredBody:2.1",
+                    "display": "Documents following C-CDA constraints using a structured body"
+                  }
+                }
+              ],
+              "context": {
+                "encounter": [
+                  {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                        "valueCode": "unknown"
+                      }
+                    ]
+                  }
+                ],
+                "period": {
+                  "end": "2026-06-10T23:59:59-04:00"
+                }
+              }
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "fullUrl": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/DocumentReference/Lt2IFR5Ah76n4d8TFP5gBNXw-p3xWs8RprA3Aah6IgM",
+            "resource": {
+              "resourceType": "DocumentReference",
+              "id": "Lt2IFR5Ah76n4d8TFP5gBNXw-p3xWs8RprA3Aah6IgM",
+              "meta": {
+                "lastUpdated": "2026-06-10T13:00:52.633-04:00",
+                "profile": [
+                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+                ]
+              },
+              "identifier": [
+                {
+                  "system": "urn:oid:2.16.840.1.113883.4.391",
+                  "value": "Lt2IFR5Ah76n4d8TFP5gBNXw-p3xWs8RprA3Aah6IgM"
+                }
+              ],
+              "status": "current",
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "18842-5",
+                    "display": "Discharge summary"
+                  }
+                ],
+                "text": "CCD Document"
+              },
+              "category": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                      "code": "clinical-note",
+                      "display": "Clinical Note"
+                    }
+                  ],
+                  "text": "Clinical Note"
+                }
+              ],
+              "subject": {
+                "reference": "Patient/Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+                "type": "Patient"
+              },
+              "date": "2024-03-01T09:35:00.000-05:00",
+              "custodian": {
+                "reference": "Organization/Lt2IFR5Ah76n4d8TFP5gBPMFWGL8HhxnxooU.mnA.n5.Xl5yXZN1TQgZByeKFIIZ",
+                "type": "Organization"
+              },
+              "content": [
+                {
+                  "attachment": {
+                    "contentType": "text/plain",
+                    "data": "RGlzY2hhcmdlIHN1bW1hcnkgbm90ZXMgYXJlIG5vdCBzdXBwb3J0ZWQgYnkgdGhlIHN5c3RlbS4="
+                  },
+                  "format": {
+                    "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+                    "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+                    "display": "mimeType Sufficient"
+                  }
+                }
+              ],
+              "context": {
+                "encounter": [
+                  {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                        "valueCode": "unknown"
+                      }
+                    ]
+                  }
+                ],
+                "period": {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unknown"
+                    }
+                  ]
+                }
+              }
+            },
+            "search": {
+              "mode": "match"
+            }
+          }
+        ]
+      },
+      "scope": "patient/DocumentReference.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/DocumentReference?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/DocumentReference?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+      ]
+    },
+    {
+      "resource_type": "Encounter",
+      "status": "ok",
+      "count": 1,
+      "rows": [
+        {
+          "id": "Lt2IFR5Ah76n4d8TFP5gBH7DrM18jACm93EMLBGKVCAWHYN2nzdr.w38nbw4WSre",
+          "type": "\u2014",
+          "status": "planned",
+          "period": "{'start': '2024-03-01T09:35:00-05:00', 'end': '2024-03-01T10:05:00-05:00'}",
+          "class": "\u2014"
+        }
+      ],
+      "columns": [
+        "id",
+        "type",
+        "status",
+        "period",
+        "class"
+      ],
+      "message": null,
+      "raw": {
+        "resourceType": "Bundle",
+        "id": "ca52af19-1993-4df0-9d06-10d52b46380b",
+        "meta": {
+          "lastUpdated": "2026-06-10T13:00:55.130-04:00"
+        },
+        "type": "searchset",
+        "total": 1,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Encounter?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+          }
+        ],
+        "entry": [
+          {
+            "fullUrl": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Encounter/Lt2IFR5Ah76n4d8TFP5gBH7DrM18jACm93EMLBGKVCAWHYN2nzdr.w38nbw4WSre",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "Lt2IFR5Ah76n4d8TFP5gBH7DrM18jACm93EMLBGKVCAWHYN2nzdr.w38nbw4WSre",
+              "meta": {
+                "lastUpdated": "2024-03-01T10:05:00.000-05:00",
+                "profile": [
+                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://eclinicalworks.com/supportingInfo/encounter/status",
+                  "valueString": "PEN (Pending)"
+                },
+                {
+                  "url": "http://eclinicalworks.com/supportingInfo/Encounter/resource/provider",
+                  "valueReference": {
+                    "reference": "Practitioner/Lt2IFR5Ah76n4d8TFP5gBAfrwqxiesg83cejztPkOEI",
+                    "type": "Practitioner"
+                  }
+                }
+              ],
+              "identifier": [
+                {
+                  "system": "urn:oid:2.16.840.1.113883.4.391",
+                  "value": "Lt2IFR5Ah76n4d8TFP5gBH7DrM18jACm93EMLBGKVCAWHYN2nzdr.w38nbw4WSre"
+                },
+                {
+                  "use": "secondary",
+                  "system": "urn:oid:2.16.840.1.113883.4.391",
+                  "value": "25418"
+                }
+              ],
+              "status": "planned",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "AMB",
+                "display": "Ambulatory"
+              },
+              "type": [
+                {
+                  "text": "New Patient"
+                }
+              ],
+              "subject": {
+                "reference": "Patient/Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+                "type": "Patient"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "PPRF",
+                          "display": "primary performer"
+                        }
+                      ],
+                      "text": "primary provider"
+                    }
+                  ],
+                  "period": {
+                    "start": "2024-03-01T09:35:00-05:00",
+                    "end": "2024-03-01T10:05:00-05:00"
+                  },
+                  "individual": {
+                    "reference": "Practitioner/Lt2IFR5Ah76n4d8TFP5gBAfrwqxiesg83cejztPkOEI",
+                    "type": "Practitioner"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-03-01T09:35:00-05:00",
+                "end": "2024-03-01T10:05:00-05:00"
+              },
+              "reasonCode": [
+                {
+                  "text": "abdominal pain"
+                }
+              ],
+              "reasonReference": [
+                {
+                  "reference": "Condition/Lt2IFR5Ah76n4d8TFP5gBBI9rnFmRI4cri9d5bAKbiprU6ffpaePgZ.7RqjoqDCu",
+                  "type": "Condition"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "reference": "Condition/Lt2IFR5Ah76n4d8TFP5gBBI9rnFmRI4cri9d5bAKbiprU6ffpaePgZ.7RqjoqDCu",
+                    "type": "Condition"
+                  },
+                  "rank": 1
+                }
+              ],
+              "hospitalization": {
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "home",
+                      "display": "Home"
+                    }
+                  ],
+                  "text": "Home"
+                }
+              },
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/Lt2IFR5Ah76n4d8TFP5gBFO4aIYpuamqju2XjvYx6Ik",
+                    "type": "Location"
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/Lt2IFR5Ah76n4d8TFP5gBPMFWGL8HhxnxooU.mnA.n5.Xl5yXZN1TQgZByeKFIIZ",
+                "type": "Organization"
+              }
+            },
+            "search": {
+              "mode": "match"
+            }
+          }
+        ]
+      },
+      "scope": "patient/Encounter.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Encounter?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Encounter?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+      ]
+    },
+    {
+      "resource_type": "MedicationAdministration",
+      "status": "empty",
+      "count": 0,
+      "rows": [],
+      "columns": [],
+      "message": "No entries in bundle",
+      "raw": {
+        "resourceType": "Bundle",
+        "id": "56e42471-d6bc-43fd-ac87-8c4a00ccd0f1",
+        "meta": {
+          "lastUpdated": "2026-06-10T13:00:57.147-04:00"
+        },
+        "type": "searchset",
+        "total": 0,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/MedicationAdministration?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+          }
+        ]
+      },
+      "scope": "patient/MedicationAdministration.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/MedicationAdministration?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/MedicationAdministration?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+      ]
+    },
+    {
+      "resource_type": "MedicationDispense",
+      "status": "empty",
+      "count": 0,
+      "rows": [],
+      "columns": [],
+      "message": "No entries in bundle",
+      "raw": {
+        "resourceType": "Bundle",
+        "id": "526cdd7f-3afd-467e-9b30-4d782e207588",
+        "meta": {
+          "lastUpdated": "2026-06-10T13:00:58.560-04:00"
+        },
+        "type": "searchset",
+        "total": 0,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/MedicationDispense?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+          }
+        ]
+      },
+      "scope": "patient/MedicationDispense.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/MedicationDispense?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/MedicationDispense?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+      ]
+    },
+    {
+      "resource_type": "MedicationRequest",
+      "status": "ok",
+      "count": 1,
+      "rows": [
+        {
+          "id": "Lt2IFR5Ah76n4d8TFP5gBFEz3G2rLoxCK-6-S0QlxhGQ27QO523AeXlt6-ydgNlV",
+          "medication": "\u2014",
+          "status": "active",
+          "authored": "2024-03-01T09:35:00-05:00",
+          "intent": "order"
+        }
+      ],
+      "columns": [
+        "id",
+        "medication",
+        "status",
+        "authored",
+        "intent"
+      ],
+      "message": null,
+      "raw": {
+        "resourceType": "Bundle",
+        "id": "8869304a-5593-49f2-b5a6-f7baf557e133",
+        "meta": {
+          "lastUpdated": "2026-06-10T13:01:00.287-04:00"
+        },
+        "type": "searchset",
+        "total": 1,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/MedicationRequest?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+          }
+        ],
+        "entry": [
+          {
+            "fullUrl": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/MedicationRequest/Lt2IFR5Ah76n4d8TFP5gBFEz3G2rLoxCK-6-S0QlxhGQ27QO523AeXlt6-ydgNlV",
+            "resource": {
+              "resourceType": "MedicationRequest",
+              "id": "Lt2IFR5Ah76n4d8TFP5gBFEz3G2rLoxCK-6-S0QlxhGQ27QO523AeXlt6-ydgNlV",
+              "meta": {
+                "lastUpdated": "2024-03-01T10:05:00.000-05:00",
+                "profile": [
+                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+                ]
+              },
+              "identifier": [
+                {
+                  "system": "http://eclinicalworks.com/supportingInfo/medicationRequest/rxOrderNo",
+                  "value": "S15827240301095053"
+                },
+                {
+                  "system": "http://eclinicalworks.com/supportingInfo/medicationRequest/itemID",
+                  "value": "271961"
+                }
+              ],
+              "status": "active",
+              "intent": "order",
+              "category": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                      "code": "outpatient",
+                      "display": "Outpatient"
+                    }
+                  ]
+                }
+              ],
+              "reportedBoolean": true,
+              "medicationReference": {
+                "reference": "Medication/Lt2IFR5Ah76n4d8TFP5gBBUTDGRSXKBPhtuIrigceNgouPFbTOgRU9oe8q1yJsL.",
+                "type": "Medication"
+              },
+              "subject": {
+                "reference": "Patient/Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+                "type": "Patient"
+              },
+              "encounter": {
+                "reference": "Encounter/Lt2IFR5Ah76n4d8TFP5gBH7DrM18jACm93EMLBGKVCAWHYN2nzdr.w38nbw4WSre",
+                "type": "Encounter"
+              },
+              "authoredOn": "2024-03-01T09:35:00-05:00",
+              "requester": {
+                "reference": "Practitioner/Lt2IFR5Ah76n4d8TFP5gBAfrwqxiesg83cejztPkOEI",
+                "type": "Practitioner"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                      "code": "A42.1",
+                      "display": "Abdominal actinomycosis"
+                    }
+                  ],
+                  "text": "Abdominal actinomycosis"
+                }
+              ],
+              "reasonReference": [
+                {
+                  "reference": "Condition/Lt2IFR5Ah76n4d8TFP5gBBI9rnFmRI4cri9d5bAKbiprU6ffpaePgZ.7RqjoqDCu",
+                  "type": "Condition"
+                }
+              ],
+              "dosageInstruction": [
+                {
+                  "text": "Ustekinumab 45 MG/0.5ML Solution Prefilled Syringe as directed Subcutaneous",
+                  "additionalInstruction": [
+                    {
+                      "text": "as directed"
+                    }
+                  ],
+                  "timing": {
+                    "repeat": {
+                      "boundsPeriod": {
+                        "start": "2024-03-01"
+                      }
+                    }
+                  },
+                  "route": {
+                    "text": "Subcutaneous"
+                  }
+                }
+              ]
+            },
+            "search": {
+              "mode": "match"
+            }
+          }
+        ]
+      },
+      "scope": "patient/MedicationRequest.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/MedicationRequest?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/MedicationRequest?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+      ]
+    },
+    {
+      "resource_type": "Observation",
+      "status": "error",
+      "count": 0,
+      "rows": [],
+      "columns": [],
+      "message": "HTTP 400: {\n  \"resourceType\": \"OperationOutcome\",\n  \"issue\": [ {\n    \"severity\": \"error\",\n    \"code\": \"not-supported\",\n    \"diagnostics\": \"Invalid request: The FHIR endpoint on this server does not know how to handle GET operation[FFBJCD/Observation] with parameters [[subject, category]]\"\n  } ]\n}",
+      "raw": {
+        "resourceType": "OperationOutcome",
+        "issue": [
+          {
+            "severity": "error",
+            "code": "not-supported",
+            "diagnostics": "Invalid request: The FHIR endpoint on this server does not know how to handle GET operation[FFBJCD/Observation] with parameters [[subject, category]]"
+          }
+        ]
+      },
+      "scope": "patient/Observation.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Observation?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw&category=vital-signs \u2192 https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Observation?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw&category=laboratory \u2192 https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Observation?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw&category=social-history (+1 more)",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Observation?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw&category=vital-signs",
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Observation?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw&category=laboratory",
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Observation?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw&category=social-history",
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Observation?subject=Patient/Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw&category=vital-signs"
+      ]
+    },
+    {
+      "resource_type": "ServiceRequest",
+      "status": "empty",
+      "count": 0,
+      "rows": [],
+      "columns": [],
+      "message": "No entries in bundle",
+      "raw": {
+        "resourceType": "Bundle",
+        "id": "d2424adb-a1f1-40a9-84b3-d7aa25b86830",
+        "meta": {
+          "lastUpdated": "2026-06-10T13:01:08.357-04:00"
+        },
+        "type": "searchset",
+        "total": 0,
+        "link": [
+          {
+            "relation": "self",
+            "url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/ServiceRequest?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+          }
+        ]
+      },
+      "scope": "patient/ServiceRequest.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/ServiceRequest?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/ServiceRequest?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+      ]
+    },
+    {
+      "resource_type": "Medication",
+      "status": "ok",
+      "count": 1,
+      "rows": [
+        {
+          "id": "Lt2IFR5Ah76n4d8TFP5gBBUTDGRSXKBPhtuIrigceNgouPFbTOgRU9oe8q1yJsL.",
+          "code": "Ustekinumab 45 MG/0.5ML Solution Prefilled Syringe",
+          "status": "\u2014"
+        }
+      ],
+      "columns": [
+        "id",
+        "code",
+        "status"
+      ],
+      "message": null,
+      "raw": {
+        "resourceType": "Bundle",
+        "type": "collection",
+        "total": 1,
+        "entry": [
+          {
+            "resource": {
+              "resourceType": "Medication",
+              "id": "Lt2IFR5Ah76n4d8TFP5gBBUTDGRSXKBPhtuIrigceNgouPFbTOgRU9oe8q1yJsL.",
+              "meta": {
+                "lastUpdated": "2024-03-01T10:05:00.000-05:00",
+                "profile": [
+                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
+                ]
+              },
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/sid/ndc",
+                    "code": "57894-0440-01",
+                    "display": "Ustekinumab 45 MG/0.5ML Solution Prefilled Syringe"
+                  },
+                  {
+                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                    "code": "853350",
+                    "display": "Ustekinumab 45 MG/0.5ML Solution Prefilled Syringe"
+                  }
+                ],
+                "text": "Ustekinumab 45 MG/0.5ML Solution Prefilled Syringe"
+              }
+            }
+          }
+        ]
+      },
+      "scope": "patient/Medication.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Medication/Lt2IFR5Ah76n4d8TFP5gBBUTDGRSXKBPhtuIrigceNgouPFbTOgRU9oe8q1yJsL.",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Medication/Lt2IFR5Ah76n4d8TFP5gBBUTDGRSXKBPhtuIrigceNgouPFbTOgRU9oe8q1yJsL."
+      ]
+    },
+    {
+      "resource_type": "Location",
+      "status": "ok",
+      "count": 1,
+      "rows": [
+        {
+          "id": "Lt2IFR5Ah76n4d8TFP5gBFO4aIYpuamqju2XjvYx6Ik",
+          "name": "Test Facility",
+          "status": "active",
+          "address": "\u2014"
+        }
+      ],
+      "columns": [
+        "id",
+        "name",
+        "status",
+        "address"
+      ],
+      "message": null,
+      "raw": {
+        "resourceType": "Bundle",
+        "type": "collection",
+        "total": 1,
+        "entry": [
+          {
+            "resource": {
+              "resourceType": "Location",
+              "id": "Lt2IFR5Ah76n4d8TFP5gBFO4aIYpuamqju2XjvYx6Ik",
+              "meta": {
+                "lastUpdated": "2026-02-26T13:27:14.000-05:00",
+                "profile": [
+                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+                ]
+              },
+              "identifier": [
+                {
+                  "use": "secondary",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "TAX",
+                        "display": "Tax ID number"
+                      }
+                    ]
+                  },
+                  "value": "424242542"
+                }
+              ],
+              "status": "active",
+              "name": "Test Facility",
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "508-475-0600"
+                },
+                {
+                  "system": "email",
+                  "value": "dffgggv"
+                },
+                {
+                  "system": "fax",
+                  "value": "(778) 787-8787"
+                }
+              ],
+              "address": {
+                "line": [
+                  "2 technology drive"
+                ],
+                "city": "westboro",
+                "state": "MA",
+                "postalCode": "01581-8989",
+                "country": "US"
+              },
+              "managingOrganization": {
+                "reference": "Organization/Lt2IFR5Ah76n4d8TFP5gBPMFWGL8HhxnxooU.mnA.n5.Xl5yXZN1TQgZByeKFIIZ",
+                "type": "Organization"
+              }
+            }
+          }
+        ]
+      },
+      "scope": "patient/Location.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Location/Lt2IFR5Ah76n4d8TFP5gBFO4aIYpuamqju2XjvYx6Ik",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Location/Lt2IFR5Ah76n4d8TFP5gBFO4aIYpuamqju2XjvYx6Ik"
+      ]
+    },
+    {
+      "resource_type": "Practitioner",
+      "status": "ok",
+      "count": 1,
+      "rows": [
+        {
+          "id": "Lt2IFR5Ah76n4d8TFP5gBAfrwqxiesg83cejztPkOEI",
+          "name": "Sam Multi Willis",
+          "active": "\u2014"
+        }
+      ],
+      "columns": [
+        "id",
+        "name",
+        "active"
+      ],
+      "message": null,
+      "raw": {
+        "resourceType": "Bundle",
+        "type": "collection",
+        "total": 1,
+        "entry": [
+          {
+            "resource": {
+              "resourceType": "Practitioner",
+              "id": "Lt2IFR5Ah76n4d8TFP5gBAfrwqxiesg83cejztPkOEI",
+              "meta": {
+                "lastUpdated": "2026-05-20T10:03:40.000-04:00",
+                "profile": [
+                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+                ]
+              },
+              "identifier": [
+                {
+                  "system": "urn:oid:2.16.840.1.113883.4.391",
+                  "value": "Lt2IFR5Ah76n4d8TFP5gBAfrwqxiesg83cejztPkOEI"
+                },
+                {
+                  "system": "http://hl7.org/fhir/sid/us-npi",
+                  "value": "1127904377"
+                }
+              ],
+              "name": [
+                {
+                  "text": "Sam Multi Willis",
+                  "family": "Willis",
+                  "given": [
+                    "Sam Multi"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "508-475-0450"
+                },
+                {
+                  "system": "email",
+                  "value": "shilpi.kataria@eclinicalworks.com"
+                }
+              ],
+              "address": [
+                {
+                  "country": "US"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "scope": "patient/Practitioner.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Practitioner/Lt2IFR5Ah76n4d8TFP5gBAfrwqxiesg83cejztPkOEI",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/Practitioner/Lt2IFR5Ah76n4d8TFP5gBAfrwqxiesg83cejztPkOEI"
+      ]
+    },
+    {
+      "resource_type": "PractitionerRole",
+      "status": "empty",
+      "count": 0,
+      "rows": [],
+      "columns": [],
+      "message": "No linked resources found in Patient / Encounter / MedicationRequest for this sandbox patient.",
+      "raw": {
+        "resourceType": "Bundle",
+        "type": "collection",
+        "total": 0,
+        "entry": []
+      },
+      "scope": "patient/PractitionerRole.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/PractitionerRole?practitioner=Lt2IFR5Ah76n4d8TFP5gBAfrwqxiesg83cejztPkOEI",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/PractitionerRole?practitioner=Lt2IFR5Ah76n4d8TFP5gBAfrwqxiesg83cejztPkOEI"
+      ]
+    },
+    {
+      "resource_type": "RelatedPerson",
+      "status": "error",
+      "count": 0,
+      "rows": [],
+      "columns": [],
+      "message": "HTTP 400: {\n  \"resourceType\": \"OperationOutcome\",\n  \"issue\": [ {\n    \"severity\": \"error\",\n    \"code\": \"not-supported\",\n    \"diagnostics\": \"Invalid request: The FHIR endpoint on this server does not know how to handle GET operation[FFBJCD/RelatedPerson] with parameters [[subject]]\"\n  } ]\n}",
+      "raw": {
+        "resourceType": "OperationOutcome",
+        "issue": [
+          {
+            "severity": "error",
+            "code": "not-supported",
+            "diagnostics": "Invalid request: The FHIR endpoint on this server does not know how to handle GET operation[FFBJCD/RelatedPerson] with parameters [[subject]]"
+          }
+        ]
+      },
+      "scope": "patient/RelatedPerson.read",
+      "request_url": "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/RelatedPerson?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw \u2192 https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/RelatedPerson?subject=Patient/Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+      "request_urls": [
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/RelatedPerson?patient=Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw",
+        "https://staging-fhir.ecwcloud.com/fhir/r4/FFBJCD/RelatedPerson?subject=Patient/Lt2IFR5Ah76n4d8TFP5gBDahw.7rC7XXFVUqelo9Lsw"
+      ]
+    }
+  ],
+  "summary": {
+    "ok_count": 8,
+    "resource_views": 18
+  }
+}
