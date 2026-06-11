@@ -61,7 +61,7 @@
       <div class="top-left">
         <a class="back-link" href="{{ url_for('home') }}">← Go Back</a>
         <div class="title-user-row">
-          <h1 class="form-title">Prior Authorization Form</h1>
+          <h1 class="form-title">{% if ehr == 'epic' %}Epic{% elif ehr == 'ecw' %}eClinicalWorks{% elif ehr == 'nextgen' %}NextGen{% else %}iKnowMed{% endif %}</h1>
           {% if user_options and user_options|length > 1 %}
           <div class="user-slot-wrap">
             <label for="user-slot-select" class="user-slot-label">Test user</label>
